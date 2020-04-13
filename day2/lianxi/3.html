@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">  
+        <h1 v-show="isShow">{{msg}}</h1>
+        <p v-if="isShow">{{msg1}}</p>
+        <!-- v-if 判断isShow 的布尔值   true显示false隐藏 -->
+        <hr/>
+        <!-- 单选框 -->
+        男：<input type="radio" name="sex" value="男" v-model="sex">
+        女：<input type="radio" name="sex" value="女" v-model="sex">
+        <p>{{sex}}</p>
+        <hr/>
+        <!-- 下拉框 -->
+        <select v-model="selected">
+            <option value="-1">请选择</option>
+            <option value="0">北京</option>
+            <option value="1">上海</option>
+            <option value="2">广州</option>
+            <option value="3">深圳</option>
+        </select>
+        <hr/>
+        <!--全选 全不选 反选 -->
+        <h2>爱好多选</h2>
+        <button @click="allsel">全选</button>
+        <button @click="nosel">全不选</button>
+        <button @click="fansel">反选</button>
+        <p v-for="item in hobbies">{{item.hobby}} <input type="checkbox" v-model="item.checked"></p> 
+        <hr/>
+        <!-- 事件及事件对象 -->
+        <!-- .prevent 阻止默认事件 -->
+        <!-- 事件对象传参是用 $event 其他参数直接写-->
+        <a href="http://www.baidu.com" @click.prevent="go(111,$event)">点击跳转</a>
+        <input type="text" :style="{width:'100px',height:'100px',background:'cyan'}" @keyup="go1('aaa',$event)">
+        <input type="text" @blur="go2(222,$event)">
+        <hr/>
+        <!-- 过滤器 -->
+        <h2>{{msg|res}}</h2>
+        <h3>{{msg1|rev}}</h3>
+    </div>
+
+</body>
+<script src="./vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            msg:"v-show",
+            msg1:"v-show-1",
+            isShow:true,
+            //true 和false 两个值  显示和隐藏
+            sex:"男",
+            selected:"3",
+            hobbies:[
+                {hobby:"爱好1",checked:true},
+                {hobby:"爱好2",checked:false},
+                {hobby:"爱好3",checked:true},
+            ]
+        },
+        methods:{
+            allsel(){
+                this.hobbies.forEach((ele) => {
+                    ele.checked=true
+                });
+            },
+            nosel(){
+                this.hobbies.forEach((ele) => {
+                    ele.checked=false
+                });
+            },
+            fansel(){
+                this.hobbies.forEach((ele) => {
+                    ele.checked=!ele.checked
+                });
+            },
+            go(n,ev){
+                console.log(n,ev)
+            },
+            go1(a,ev){
+                console.log(a,ev)
+            },
+            go2(nn,ev){
+                console.log(nn,ev)
+            },
+
+        },
+        // 过滤器
+        filters:{
+            res(val){
+                //reverse   反转
+                return  val.split('').reverse().join('')
+            },
+            rev(aa){
+                //截取
+                return aa.slice(2)
+            }
+        }
+    })
+
+</script>
+</html>

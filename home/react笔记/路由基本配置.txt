@@ -1,0 +1,71 @@
+路由
+1、 yarn add react-router-dom --save-dev 或者
+    npm install react-router-dom --save-dev
+
+import { BrowserRouter,Route,Link,Switch } from "react-router-dom"
+
+路由模式 ：BrowserRouter  （history）
+         HashRouter       （hash）
+设置路由 路径 Link  <Link to="地址"></Link>
+根据路由 动态匹配组件  Route 
+    <Route path="地址">
+    组件
+    </Route>
+
+
+懒加载，满足条件匹配该组件  Switch
+
+
+要求
+做一个单页面应用
+
+思路：根据 底部 导航 切换不同的 组件
+
+1、创建 组件
+    {
+        APP.jsx 主 {
+            内容  （切换）  
+            底部导航 (首页，分类，个人中心)
+        }
+        Shou.jsx{
+            首页的页面
+        }
+        Fen.jsx{
+            分类的页面
+        }
+        Wode.jsx{
+            个人中心的页面
+        }
+
+    }
+2、导入组件 测试 --每测试一步注释一步
+    在App.jsx 组件中 载入 Shou.jsx 组件 显示到 内容中 --看是否成功渲染
+    在App.jsx 组件中 载入 Fen.jsx 组件 显示到 内容中 --看是否成功渲染
+    在App.jsx 组件中 载入 Wode.jsx 组件 显示到 内容中 --看是否成功渲染
+
+
+3、载入路由 
+    首先 下载 react-router-dom 这个模块
+        下载命令：
+        yarn add react-router-dom --save-dev 
+        或者
+        npm install react-router-dom --save-dev
+        
+4、 配置路由
+        在需要使用路由的App.jsx组件中 载入 react-router-dom模块
+        import { BrowserRouter,Route,Link,Switch } from "react-router-dom"
+
+        使用  BrowserRouter （history路由模式）或者 HashRouter（hash路由模式）
+             包裹 需要路由控制的 所有节点
+
+        使用 Link 包裹 点击改变路由地址的 内容
+            <Link to="改变的路由地址">首页</Link>
+        使用 Switch 包裹 所有的 Route
+        使用 Route 包裹 动态匹配的组件
+             <Route path="路由地址">
+                <Wode></Wode> 动态匹配的组件
+            </Route>
+            
+
+
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 插值表达式 -->
+        {{msg}}
+        <hr/>
+        {{htmlStr}}
+        <hr/>
+        <!-- js运算表达式 -->
+        <!-- js运算符在表达式中的特殊 -->
+        {{num+2}} 
+        <hr/>
+        <!-- bol -->
+        {{ok?"邵":"程"}}
+        <hr/>
+        <!-- 原生js字符串方法 -->
+        {{arrStr.split(',')}}
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    let vm=new Vue({
+        el:"#app",//
+        data:{
+            msg:"hello",
+            htmlStr:"<p>因为爱情</p>",
+            num:0,
+            ok:false,
+            arrStr:"a,b,c,d"
+        }
+    })
+</script>
+</html>

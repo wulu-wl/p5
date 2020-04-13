@@ -1,0 +1,21 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+ul{
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #f00;
+}
+li{
+    width: 30%;
+   border: 1px solid #000;
+    text-align: center;
+    list-style: none;
+}

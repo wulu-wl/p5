@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            width: 600px;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+
+        .add {
+            border: 1px solid #000;
+            height: 35px;
+            line-height: 35px;
+            padding-left: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th {
+            border: 1px solid #ccc;
+            background-color: #0094ff;
+            height: 35px;
+        }
+
+        td {
+            border: 1px solid #ccc;
+            height: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="add">
+            品牌名称：<input type="text" v-model="bannerName"><button @click="add()">添加</button>
+        </div>
+        <div class="add">
+            品牌名称：<input type="text" v-model="search">
+        </div>
+        <!-- 展示区 -->
+        <div class="content">
+            <table>
+                <tr>
+                    <th>编号</th>
+                    <th>品牌名称</th>
+                    <th>创立时间</th>
+                    <th>操作</th>
+                </tr>
+                <tr v-for="(item,index) in getCarList">
+                    <!-- th表头 td表格 -->
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.time|myTime("-",":")}}</td>
+                    <td><a href="" @click.prevent="del(index)">删除</a></td>
+                </tr>
+                {{getCarList}}
+                <!-- v-show v-if -->
+                <tr v-if="carList.length<=0">
+                    <td colspan="4">没有品牌数据</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="./moment.js"></script>
+<script src="./vue.js"></script>
+<script>
+    // vue过滤器
+    Vue.filter("myTime",(val,connone,conntwo)=>{
+        return moment().format(`YYYY${connone}MM${connone}DD h${conntwo}mm${conntwo}ss a`);
+    })
+    let vm = new Vue({
+        el:"#app",
+        data:{
+            carList:[{
+                id:1,
+                name:"红旗h5",
+                time:new Date()
+            },{
+                id:2,
+                name:"五棱宏光",
+                time:new Date()
+            },{
+                id:3,
+                name:"奇瑞qq",
+                time:new Date()
+            }],
+            bannerName:"",
+            search:""
+        },
+        methods:{
+            add(){
+                this.carList.push({id:this.carList.length+1,name:this.bannerName,time:new Date()})
+                // 清空
+                this.bannerName=""
+            },
+            del(i){
+                this.carList.splice(i,1)
+            }
+        },
+        computed:{
+            getCarList(){
+                return this.carList.filter((word)=>{
+                    return word.name.includes(this.search)
+                })
+            }
+        }
+    })
+</script>
+
+</html>

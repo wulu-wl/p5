@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+         <!-- {{msg}} -->
+         <input type="text" v-myfocus/>  
+         <input type="text" v-myfocus/>  
+         <input type="text" v-myfocus/> 
+         <input type="text" v-myfocus/> 
+         <input type="text" v-myfocus/> 
+         <input type="text" v-myfocus/> 
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    // 全局指令
+    // 焦点只有一个最后一个
+    Vue.directive("myfocus",{
+        "inserted":(el)=>{
+            el.style.background="cyan"
+            el.focus()
+        }
+    })
+    let vm1=new Vue({
+        el:"#app",
+        data:{
+            msg:"hello world"
+        }
+    })
+    
+</script>
+</html>

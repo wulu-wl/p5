@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+
+    <style>
+
+        #shop{
+
+            width: 500px;
+
+            margin: 40px auto;
+
+            text-align: center;
+
+        }
+
+        table{
+
+            border-collapse: collapse;
+
+            width: 500px;
+
+            margin: 40px auto;
+
+        }
+
+        th,td{
+
+            padding: 6px 0;
+
+            text-align: center;
+
+        }
+
+        span{
+
+            cursor: pointer;
+
+        }
+
+        span:hover{
+
+            color: red;
+
+        }
+
+        input{
+
+            width: 30px;
+
+            border: none;
+
+            text-align: center;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="app">
+
+        <table border="1">
+
+            <thead>
+
+                <thead>
+
+                    <tr>
+
+                        <th>商品名称</th>
+
+                        <th>单价</th>
+
+                        <th>操作</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr v-for = "i of arr.entries()">
+
+                        <td>{{i[1].name}}</td>
+
+                        <td>{{i[1].price}}</td>
+
+                        <td><span @click="add(i[0])">购买</span></td>
+
+                    </tr>
+
+                </tbody>
+
+            </thead>
+
+        </table>
+
+        <div id="shop">
+
+            <h2>购物车</h2>
+
+            <table border="1"> 
+
+                <thead>
+
+                    <tr>
+
+                        <th>购买商品</th>
+
+                        <th>数量</th>
+
+                        <th>价格</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <!-- [0,{na...}] -->
+
+                        <tr v-for = "i of shopArr.entries()">
+
+                            <td v-text= "i[1].name"></td>
+
+                            <td><button @click = "readnum(i[0])">-</button><span v-text= "i[1].count"></span><button @click = "addnum(i[0])">+</button></td>
+
+                           <td v-text= "i[1].count*i[1].price"></td>
+
+                        </tr>
+
+                </tbody>
+
+            </table>
+
+            <p>总价格：<strong v-text = "zzj"></strong></p>
+
+        </div>
+
+    </div>
+
+</body>
+
+<script src="./vue.js"></script>
+
+<script>
+
+    var vm = new Vue({
+
+        el:"#app",
+
+        data:{
+
+            //购买
+
+            arr:[{name:"白菜",price:10},{name:"芹菜",price:20},{name:"香菜",price:30}],
+
+            //购物车
+
+            shopArr:[],
+
+            //总计
+
+            zzj:0,
+
+        },
+
+        methods:{
+
+             add(i){
+
+                 //计数
+
+                let num = 0;
+
+                for(var j = 0;j<this.shopArr.length;j++){
+
+                    if(this.shopArr[j].name == this.arr[i].name){
+
+                        num++;
+
+                        this.shopArr[j].count++;
+
+                    }
+
+                }
+
+                if(num == 0){
+
+                    this.arr[i].count = 1;
+
+                    this.shopArr.push(this.arr[i]);
+
+                } 
+
+                this.zj()
+
+            },
+
+            zj(){
+
+                var shopNum = 0;
+
+                for(var j = 0;j<this.shopArr.length;j++){
+
+                    shopNum += this.shopArr[j].count * this.shopArr[j].price
+
+                }
+
+                this.zzj = shopNum;
+
+            },
+
+            addnum(i){
+
+                this.shopArr[i].count++;
+
+                this.zj()
+
+            },
+
+            readnum(i){
+
+                this.shopArr[i].count--;
+
+                if(this.shopArr[i].count == 0){
+
+                    this.shopArr.splice(i,1)
+
+                }
+
+                this.zj()
+
+            }
+
+        }
+
+    })
+
+</script>
+
+</html>

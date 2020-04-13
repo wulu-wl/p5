@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <router-link to="movie">电影</router-link>
+        <router-link to="music">音乐</router-link>
+        <router-view></router-view>
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script src="./vue-router.js"></script>
+<script>
+    let movie={
+        template:`<div>电影页面</div>`
+    }
+    let music={
+        template:`<div>音乐页面</div>`
+    }
+    let routes=[{
+        path:"/movie",
+        component:movie
+    },{
+        path:"/music",
+        component:music
+    }]
+    let router=new VueRouter({routes})
+    new Vue({
+        el:"#app",
+        data:{},
+        router
+    })
+</script>
+</html>

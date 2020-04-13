@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="杨欣">
+  <title>map</title>
+</head>
+ 
+<body>
+ 
+  <script>
+    Array.prototype.my_map = function (callback) {
+      if (!Array.isArray(this) || !this.length || typeof callback !== 'function') {
+        return []
+      } else {
+        let result = [];
+        for (let index = 0; index < this.length; index++) {
+          const element = this[index];
+          result.push(callback(element, index, this))
+        }
+        return result
+      }
+    }
+ 
+    let arr = [1, 2, 3, 4, 5]
+    let res = arr.my_map((ele, i) => {
+      return ele + 10
+    })
+    console.log(res)
+  </script>
+</body>
+ 
+</html>

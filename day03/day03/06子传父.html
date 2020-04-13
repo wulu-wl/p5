@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{song}}{{singer}}<br/>
+        <mycom v-on:fssong="fn"></mycom>
+    </div>
+    <script type="text/template" id="show">
+        <div class="show">
+            {{fs(song)}}
+        </div>
+    </script>
+</body>
+
+<script src="./vue.js"></script>
+<script>
+    Vue.component("mycom",{
+        template:"#show",
+        data(){
+            return {
+                song:"因为爱情"                
+            }
+        },
+        // 发送数据的业务
+        methods:{
+            fs(song){
+                // 子组件儿中自定义的事件儿,绑定在子组件上
+                this.$emit("fssong",song)
+            }
+        }
+    })
+    let vm=new Vue({
+        el:"#app",
+        data:{
+            song:"",
+            singer:"王菲"
+        },
+        // 接受业务
+        methods:{
+            fn(m){
+                this.song=m
+            }
+        }
+    })
+    // $bus
+    // 子传父  流程
+    // 在子组件中创建业务  发送数据   模板中调用我们的业务方法(fs)  在子组件的view层绑定我们的自定义事件儿等于父组件中的接收方法
+    // 在父组件中创建业务  接受数据   如果有一个参数,就一个形参,如果多个,就多个形参
+    // 三大爱好
+</script>
+</html>

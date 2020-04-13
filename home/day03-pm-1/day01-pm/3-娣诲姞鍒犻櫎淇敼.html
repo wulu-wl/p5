@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="inputval">
+        <button v-on:click="add()">添加</button>
+        <ul>
+            <li v-for="(v,i) in list" v-bind:key="i">
+                {{v}}
+                <button v-on:click="del(i)"> 删除</button>
+                <button v-on:click="edit(i)"> 修改</button>
+
+            </li>
+        </ul>
+
+        <hr>
+        <input type="text" v-model="editval">
+        <button v-on:click="editok()">确认修改</button>
+    </div>
+    <script>
+        // input 定义到 data 中 通过 v-model 设置和获取 值 // 定义ul 数组 
+        // 点击button 获取input 的值
+        // input 的数据 push 到 ul 的数组中
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                inputval: "123",
+                list: ['1', '22', '333'],
+                editval: "",
+                index: ""
+            },
+            methods: {
+                edit(index) {
+                    this.index = index;
+                    this.editval = this.list[index]
+                },
+                editok() {
+                    // this.list[this.index] = this.editval
+                    let arr = [...this.list];
+                    arr[this.index] = this.editval;
+                    this.list = arr;
+                },
+                add() {
+                    this.list.push(this.inputval)
+                    // alert(this.inputval)
+                },
+                del(index) {
+                    // alert(index)
+                    this.list.splice(index, 1)
+                }
+            }
+
+        })
+
+
+    </script>
+</body>
+
+</html>

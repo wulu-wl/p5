@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="App">
+        <!-- 数组 -->
+        <!-- <ul v-for="item in list">
+            <li v-for="item1 in item">
+                {{item1}}
+            </li>
+        </ul> -->
+
+        <!-- 对象 -->
+        <ul>
+            <li v-for="item in list">{{item}}</li>
+        </ul>
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+
+let vm=new Vue({
+    el:"#App",
+    data:{
+        // list:[{name:"one",age:13},{name:"two",age:13}]
+        list:{name:"one",age:13}
+
+    },
+    mounted(){
+        //数组
+        // this.list[2]={name:"three",age:14}
+        // console.log(this.list)
+        // this.$set(this.list,2,{name:"three",age:14})
+
+        //对象
+        // this.list.sex="男"
+        // console.log(this.list)
+        Vue.set(this.list,"sex","男")
+    }
+})
+
+</script>
+</html>

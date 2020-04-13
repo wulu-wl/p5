@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* body{ */
+        /* 创建一个计数器  js是他的名字  自定义的 */
+        /* counter-reset: js; */
+        /* } */
+        /* p::before{ */
+        /* 让计数器开始计数 */
+        /* counter-increment: js; */
+        /* 让生成的数字显示 */
+        /* content: "这是"counter(js)':';
+        } */
+
+        /* 计数器嵌套 */
+        body{
+            counter-reset: j1;
+        }
+        h1{
+            counter-reset: j2;
+        }
+        h1::before{
+            counter-increment: j1;
+            content: counter(j1);
+        }
+        p::before{
+            counter-increment: j2;
+            content:counter(j1)"-" counter(j2);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 计数器  css3 -->
+    <h1>
+        计数器A
+    </h1>
+    <p>计数器一</p>
+    <p>计数器二</p>
+    <p>计数器三</p>
+    <h1>
+        计数器B
+    </h1>
+    <p>计数器一</p>
+    <p>计数器二</p>
+    <p>计数器三</p>
+    <h1>
+        计数器C
+    </h1>
+    <p>计数器一</p>
+    <p>计数器二</p>
+    <p>计数器三</p>
+</body>
+
+</html>

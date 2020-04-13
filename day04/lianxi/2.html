@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <router-link :to="{path:'/index/aa',query:{a:'aa',b:'bb'}}">1</router-link>
+        <router-link :to="{path:'/index/aa',query:{a:'aa1',b:'bb1'}}">2</router-link>
+        <router-link :to="{path:'/index/aa',query:{a:'aa2',b:'bb3'}}">3</router-link>
+        <router-view></router-view>
+    </div>
+    <template id="index">
+        <div class="index">
+            {{$route.query}}
+
+        </div>
+    </template>
+</body>
+<script src="../kong/vue.js"></script>
+<script src="../kong/vue-router.js"></script>
+<script>
+let index={
+    template:"#index",
+}
+let routes=[{
+    path:'/index/:in',
+    component:index
+}]
+let router=new VueRouter({routes})
+
+new Vue({
+    el:'#app',
+    data:{},
+    router
+})
+</script>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 展示区 -->
+        <table border="1" cellspacing="0" width="400px" style="margin: 60px auto;text-align: center;">
+            <thead>
+                <tr>
+                    <th>人名</th>
+                    <th>单价</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(item,index) in arr">
+                    <td>{{item.name}}</td>
+                    <td>{{item.price}}</td>
+                    <td @click="add(index)">购买</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 购物车区域 -->
+        <div class="shopArea">
+            <h2 style="width: 100%;text-align: center;">购物车</h2>
+            <table border="1" cellspacing="0" width="400px" style="margin: 60px auto;text-align: center;">
+                <thead>
+                    <tr>
+                        <th>购买人</th>
+                        <th>数量</th>
+                        <th>价格</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(item,index) in shopArr">
+                        <td>{{item.name}}</td>
+                        <td><button @click="reduce(index)">-</button>{{item.count}}<button @click="zeng(index)">+</button></td>
+                        <td>{{item.count*item.price}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p v-html="allPrice" style="width: 100%;text-align: center;"></p>
+        </div>
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    let vm = new Vue({
+        el: "#app",
+        data: {
+            // 人集合
+            arr: [{
+                name: "于蒙恩",
+                price: 10
+            }, {
+                name: "武星呈",
+                price: 1
+            }, {
+                name: "杨鹏海",
+                price: 5
+            }],
+            //购物车
+            shopArr: [],
+            //总价
+            allPrice:0
+        },
+        methods: {
+            add(i) {
+                // arr count  
+                let num=0;
+                for(var j=0;j<this.shopArr.length;j++){
+                    if(this.shopArr[j].name==this.arr[i].name){
+                        num++;
+                        this.arr[i].count++;
+                        // copy数组
+                        let newArr=this.shopArr.slice(0)
+                        this.shopArr=newArr
+                        // 119 堆栈 深考  浅拷贝
+                    }
+                    
+                }
+                if(num==0){
+                    this.arr[i].count=1;
+                    this.shopArr.push(this.arr[i])
+                } 
+                this.zj()
+            },
+            zj(){
+                // let allPrice=0;
+                // 数量*单价   count*price
+                this.allPrice=0;
+                this.shopArr.forEach((ele,index)=>{
+                    // console.log(ele,index)
+                    this.allPrice+=ele.price*ele.count
+                });
+            },
+            reduce(i){
+                // console.log(this.shopArr[i].count-1)
+                // 生成新数组
+                let newArr=this.shopArr.slice(0)
+                this.shopArr=newArr
+                this.shopArr[i].count=this.shopArr[i].count-1;
+                if(this.shopArr[i].count==0){
+                    this.shopArr.splice(i,1)
+                }
+                this.zj()
+            },
+            zeng(i){
+                let newArr=this.shopArr.slice(0)
+                this.shopArr=newArr
+                this.shopArr[i].count=this.shopArr[i].count+1
+                this.zj()
+            }
+        }
+    })
+</script>
+
+</html>

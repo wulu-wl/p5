@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <router-link to="/luyou1">路由1</router-link>
+        <router-link to="/luyou2">路由2</router-link>
+        <router-link to="/luyou3">路由3</router-link>
+        <router-view></router-view>
+    </div>
+    <template id="login">
+        <div class="login">
+            用户名:<input type="text"/>
+            用户名:<input type="text"/>
+            <button>登陆</button>
+        </div>
+    </template>
+</body>
+<script src="./vue.js"></script>
+<script src="./vue-router.js"></script>
+<script>
+    //复习昨天的内容
+    // 路由传值
+    // path  query params  str  
+    // params 刷新页面数据丢失  配合命名路由 
+    // query  刷新页面数据不丢失 配合path  可传对象
+
+    // 动态路由  
+
+    // watch和computed 的区别
+    // 一直被调用  从新计算 data数据
+    // 有缓存,不需要从新计算data
+    // 二级路由
+    // 生命周期/全局导航钩子 
+    //登陆组件儿
+    let login={
+        template:"#login"
+    }
+    //配置路由文件
+    let routes=[{
+        path:"/luyou1",
+        component:{
+            template:`
+                <div>路由一</div>
+            `
+        }
+    },{
+        path:"/luyou2",
+        meta:{
+            isLogin:true
+        },
+        component:{
+            template:`
+                <div>路由二</div>
+            `
+        }
+    },{
+        path:"/luyou3",
+        meta:{
+            power:1
+        },
+        component:{
+            template:`
+                <div>路由三</div>
+            `
+        }
+    },{
+        path:"/login",
+        component:login
+    }]
+    let router=new VueRouter({
+        routes
+    })
+    let vm=new Vue({
+        el:"#app",
+        data:{},
+        router
+    })
+    //全局路由导航钩子函数
+    //京东  index页面  先去登陆 
+    //通过判断是否有meta属性  
+    //meta对象中的isLogin是否为true
+    //如果是true  去登陆 
+    //如果是false 接下来的操作
+    //路由守卫 
+    router.beforeEach((to,from,next)=>{
+        console.log("娃哈哈")
+        console.log(to);
+        console.log(from);
+        // next()
+        if(to.meta.isLogin){
+            if(false){  //判断该路由需要是否需要登录
+                next()  
+            }else{
+                alert("先去登陆吧")
+                next("/login")
+            }
+        }else{//一路到底
+            alert("爱谁谁")
+            next()
+        }
+    })
+</script>
+</html>

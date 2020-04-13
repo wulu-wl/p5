@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .footer{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            bottom: 0;
+        }
+        .footer a{
+            width: 25%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="footer">
+            <!-- 路由入口文件 -->
+            <router-link to="/index">首页</router-link>
+            <router-link to="/discover">发现</router-link>
+            <router-link to="/order">订单</router-link>
+            <router-link to="/my">我的</router-link>
+        </div>
+        <!-- 内容展示区 -->
+        <router-view></router-view>
+    </div>   
+    <template id="index">
+        <div class="index">
+            首页页面
+        </div>
+    </template> 
+    <template id="discover">
+        <div class="discover">
+            发现页面
+        </div>
+    </template>
+    <template id="order">
+        <div class="order">
+            订单页面
+        </div>
+    </template>
+    <template id="my">
+        <div class="my">
+            我的页面
+        </div>
+    </template>
+</body>
+<script src="./vue.js"></script>
+<script src="./vue-router.js"></script>
+<script>
+    let index={
+        template:"#index"
+    }
+    let discover={
+        template:"#discover"
+    }
+    let order={
+        template:"#order"
+    }
+    let my={
+        template:"#my"
+    }
+    // 配置路由文件
+    let routes=[{
+        path:"/index",
+        component:index
+    },{
+        path:"/discover",
+        component:discover
+    },{
+        path:"/order",
+        component:order
+    },{
+        path:"/my",
+        component:my
+    },{
+        path:"*",
+        redirect:"/index"
+    }]
+    let router=new VueRouter({
+        routes
+    })
+    let vm=new Vue({
+        el:"#app",
+        data:{},
+        router
+    })
+</script>
+</html>

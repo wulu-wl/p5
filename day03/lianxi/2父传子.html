@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        
+        <com1 :abc_a="a1" :abc_c="c1"></com1>
+        <com2 :abc_d="d1"></com2>
+    </div>
+    <script type="text/template" id="box1">
+        <div class="box1">
+            {{abc_a}}{{b1}}{{abc_c}}
+        </div>
+    </script>
+    <template id="box2">
+        <div class="box2">
+            {{abc_d}}{{e1}}{{f1}}
+        </div>
+    </template>
+</body>
+<script src="./vue.js"></script>
+<script>
+    Vue.component('com1',{
+        template:"#box1",
+        data(){
+            return {
+                b1:"bb"
+            }
+        },
+        props:["abc_a","abc_c"]
+    })
+    let com2={
+        template:"#box2",
+        data(){
+            return {
+                e1:"ee",
+                f1:"ff"
+            }
+        },
+        props:["abc_d"]
+        
+    }
+    new Vue({
+        el:"#app",
+        data:{
+            a1:"aa",
+            d1:"dd",
+            c1:"cc"
+        },
+        components:{
+            com2
+        }
+    })
+
+</script>
+</html>

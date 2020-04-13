@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p v-for="item in arr1">{{item.name}}</p>
+    </div>    
+</body>
+<script src="./vue.js"></script>
+<script>
+    // 遍历循环  wx:for  map
+    new Vue({
+        el:"#app",
+        data:{
+            arr:["a","b","c","d"],
+            obj:{
+                name:"程悦",
+                age:"22",
+                hobby:"长个儿"
+            },
+            arr1:[
+                {name:"1"},
+                {name:"2"},
+                {name:"3"}
+            ]
+        }
+    })
+
+
+    // 增删
+
+</script>
+</html>

@@ -1,0 +1,1511 @@
+[{
+  "title": "实用分类",
+  "cid": "111100",
+  "children": [{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_shiyongfenlei_1.png",
+    "title": "快手菜",
+    "cidd": "111101"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_shiyongfenlei_2.png",
+    "title": "下饭菜",
+    "cidd": "111102"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_shiyongfenlei_3.png",
+    "title": "应季时蔬",
+    "cidd": "111103"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_shiyongfenlei_4.png",
+    "title": "素食",
+    "cidd": "111104"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_shiyongfenlei_5.png",
+    "title": "肉食",
+    "cidd": "111105"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_shiyongfenlei_6.png",
+    "title": "汤",
+    "cidd": "111106"
+  }, {
+    "image": "https://s1.c.meishij.net/zt/images/fenlei_xihongshichaojidan1.png",
+    "title": "家常菜",
+    "cidd": "111107"
+  }]
+}, {
+  "title": "每日三餐",
+  "cid": "111200",
+  "children": [{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_sancan_1.png",
+    "title": "早餐",
+    "cidd": "111201"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_sancan_2.png",
+    "title": "午餐",
+    "cidd": "111202"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_sancan_3.png",
+    "title": "下午茶",
+    "cidd": "111203"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_sancan_4.png",
+    "title": "晚餐",
+    "cidd": "111204"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_sancan_5.png",
+    "title": "夜宵",
+    "cidd": "111205"
+  }]
+}, {
+  "title": "主食",
+  "cid": "111300",
+  "children": [{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhushi_1.png",
+    "title": "炒饭",
+    "cidd": "111301"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhushi_2.png",
+    "title": "焖饭",
+    "cidd": "111302"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhushi_3.png",
+    "title": "烩饭",
+    "cidd": "111303"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhushi_4.png",
+    "title": "饭",
+    "cidd": "111304"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhushi_5.png",
+    "title": "方便面",
+    "cidd": "111305"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhushi_6.png",
+    "title": "焖面",
+    "cidd": "111306"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhushi_7.png",
+    "title": "拌面",
+    "cidd": "111307"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhushi_8.png",
+    "title": "面",
+    "cidd": "111308"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhushi_9.png",
+    "title": "饼",
+    "cidd": "111309"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhushi_10.png",
+    "title": "包子",
+    "cidd": "1113010"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhushi_11.png",
+    "title": "饺子",
+    "cidd": "111308"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhushi_12.png",
+    "title": "馄饨",
+    "cidd": "111309"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhushi_13.png",
+    "title": "粥",
+    "cidd": "1113010"
+  }]
+}, {
+  "title": "家常菜谱",
+  "cid": "111400",
+  "children": [{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_jiachangcaipu_1.png",
+    "title": "热菜",
+    "cidd": "111401"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_jiachangcaipu_2.png",
+    "title": "凉菜",
+    "cidd": "111402"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_jiachangcaipu_3.png",
+    "title": "素菜",
+    "cidd": "111403"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_jiachangcaipu_4.png",
+    "title": "靓汤",
+    "cidd": "111404"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_jiachangcaipu_5.png",
+    "title": "粥品",
+    "cidd": "111405"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_jiachangcaipu_6.png",
+    "title": "主食",
+    "cidd": "111406"
+  }]
+}, {
+  "title": "中华菜系",
+  "cid": "111500",
+  "children": [{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_1.png",
+    "title": "川菜",
+    "cidd": "111501"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_2.png",
+    "title": "鲁菜",
+    "cidd": "111502"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_3.png",
+    "title": "粤菜",
+    "cidd": "111503"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_4.png",
+    "title": "湘菜",
+    "cidd": "111504"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_5.png",
+    "title": "闽菜",
+    "cidd": "111505"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_6.png",
+    "title": "浙菜",
+    "cidd": "111506"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_7.png",
+    "title": "苏菜",
+    "cidd": "111507"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_8.png",
+    "title": "徽菜",
+    "cidd": "111508"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_9.png",
+    "title": "京菜",
+    "cidd": "111509"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_10.png",
+    "title": "沪菜",
+    "cidd": "111510"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_11.png",
+    "title": "豫菜",
+    "cidd": "111511"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_12.png",
+    "title": "湖北菜",
+    "cidd": "111512"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_13.png",
+    "title": "东北菜",
+    "cidd": "111513"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_14.png",
+    "title": "西北菜",
+    "cidd": "111514"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_15.png",
+    "title": "云贵菜",
+    "cidd": "111515"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_16.png",
+    "title": "清真菜",
+    "cidd": "111516"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_17.png",
+    "title": "港台菜",
+    "cidd": "111517"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_18.png",
+    "title": "其他菜",
+    "cidd": "111518"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_19.png",
+    "title": "云南菜",
+    "cidd": "111519"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_20.png",
+    "title": "贵州菜",
+    "cidd": "111520"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_21.png",
+    "title": "淮扬菜",
+    "cidd": "111521"
+  }]
+}, {
+  "title": "各地小吃",
+  "cid": "111600",
+  "children": [{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_1.png",
+    "title": "北京小吃",
+    "cidd": "111601"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_2.png",
+    "title": "天津小吃",
+    "cidd": "111602"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_3.png",
+    "title": "河北小吃",
+    "cidd": "111603"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_4.png",
+    "title": "山西小吃",
+    "cidd": "111604"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_5.png",
+    "title": "蒙古小吃",
+    "cidd": "111605"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_6.png",
+    "title": "上海小吃",
+    "cidd": "111606"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_7.png",
+    "title": "山东小吃",
+    "cidd": "111607"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_8.png",
+    "title": "江苏小吃",
+    "cidd": "111608"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_9.png",
+    "title": "浙江小吃",
+    "cidd": "111609"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_10.png",
+    "title": "安徽小吃",
+    "cidd": "111610"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_11.png",
+    "title": "吉林小吃",
+    "cidd": "111611"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_12.png",
+    "title": "辽宁小吃",
+    "cidd": "111612"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_13.png",
+    "title": "陕西小吃",
+    "cidd": "111613"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_14.png",
+    "title": "新疆小吃",
+    "cidd": "111614"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_15.png",
+    "title": "宁夏小吃",
+    "cidd": "111615"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_16.png",
+    "title": "甘肃小吃",
+    "cidd": "111616"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_17.png",
+    "title": "青海小吃",
+    "cidd": "111617"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_18.png",
+    "title": "湖北小吃",
+    "cidd": "111618"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_19.png",
+    "title": "湖南小吃",
+    "cidd": "111619"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_20.png",
+    "title": "河南小吃",
+    "cidd": "111620"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_21.png",
+    "title": "江西小吃",
+    "cidd": "111621"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_22.png",
+    "title": "重庆小吃",
+    "cidd": "111622"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_23.png",
+    "title": "四川小吃",
+    "cidd": "111623"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_24.png",
+    "title": "云南小吃",
+    "cidd": "111624"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_25.png",
+    "title": "贵州小吃",
+    "cidd": "111625"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_26.png",
+    "title": "西藏小吃",
+    "cidd": "111626"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_27.png",
+    "title": "广东小吃",
+    "cidd": "111627"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_28.png",
+    "title": "福建小吃",
+    "cidd": "111628"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_29.png",
+    "title": "广西小吃",
+    "cidd": "111629"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_30.png",
+    "title": "海南小吃",
+    "cidd": "111630"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_31.png",
+    "title": "香港小吃",
+    "cidd": "111631"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_32.png",
+    "title": "台湾小吃",
+    "cidd": "111632"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_33.png",
+    "title": "成都小吃",
+    "cidd": "111633"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_gedixiaochi_34.png",
+    "title": "特色小吃",
+    "cidd": "111634"
+  }]
+}, {
+  "title": "外国菜谱",
+  "cid": "111700",
+  "children": [{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_waiguocaipu_1.png",
+    "title": "日本料理",
+    "cidd": "111701"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_waiguocaipu_2.png",
+    "title": "韩国料理",
+    "cidd": "111702"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_waiguocaipu_3.png",
+    "title": "美国家常菜",
+    "cidd": "111703"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_waiguocaipu_4.png",
+    "title": "意大利餐",
+    "cidd": "111704"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_waiguocaipu_5.png",
+    "title": "法国菜",
+    "cidd": "111705"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_waiguocaipu_6.png",
+    "title": "墨西哥菜",
+    "cidd": "111706"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_waiguocaipu_7.png",
+    "title": "澳大利亚菜",
+    "cidd": "111707"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_waiguocaipu_8.png",
+    "title": "东南亚菜",
+    "cidd": "111708"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_waiguocaipu_9.png",
+    "title": "西餐面点",
+    "cidd": "111709"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_waiguocaipu_10.png",
+    "title": "餐前小吃",
+    "cidd": "111710"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_waiguocaipu_11.png",
+    "title": "汤品",
+    "cidd": "111711"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_waiguocaipu_12.png",
+    "title": "主菜",
+    "cidd": "111712"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_waiguocaipu_13.png",
+    "title": "主食",
+    "cidd": "111713"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_waiguocaipu_14.png",
+    "title": "甜点",
+    "cidd": "111714"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_waiguocaipu_15.png",
+    "title": "饮品",
+    "cidd": "111715"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_waiguocaipu_16.png",
+    "title": "其他国家",
+    "cidd": "111716"
+  }]
+}, {
+  "title": "烘培",
+  "cid": "111800",
+  "children": [{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_hongbei_1.png",
+    "title": "蛋糕面包",
+    "cidd": "111801"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_hongbei_2.png",
+    "title": "饼干配方",
+    "cidd": "111802"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_hongbei_3.png",
+    "title": "甜品点心",
+    "cidd": "111803"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_hongbei_4.png",
+    "title": "蛋糕",
+    "cidd": "111804"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_hongbei_5.png",
+    "title": "面包",
+    "cidd": "111805"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_hongbei_6.png",
+    "title": "翻糖",
+    "cidd": "111806"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_hongbei_7.png",
+    "title": "烘培工具",
+    "cidd": "111807"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_hongbei_8.png",
+    "title": "烘培常识",
+    "cidd": "111808"
+  }, {
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_hongbei_9.png",
+    "title": "烘培原料",
+    "cidd": "111809"
+  }]
+}, {
+  "title": "人群",
+  "cid": "111900",
+  "children": [{
+    "image": "//s1.c.meishij.net/zt/images/fl_renqun_nanren1.png",
+    "title": "男人",
+    "cidd": "111901"
+  }, {
+    "image": "//s1.c.meishij.net/zt/images/fl_renqun_gengnianqi1.png",
+    "title": "更年期",
+    "cidd": "111902"
+  }, {
+    "image": "//s1.c.meishij.net/images/get3/fenlei/fl_renqun_1.png",
+    "title": "孕妇",
+    "cidd": "111903"
+  }, {
+    "image": "//s1.c.meishij.net/images/get3/fenlei/fl_renqun_5.png",
+    "title": "婴儿",
+    "cidd": "111904"
+  }, {
+    "image": "//s1.c.meishij.net/zt/images/fl_renqun_nvxing1.png",
+    "title": "女性",
+    "cidd": "111905"
+  }, {
+    "image": "//s1.c.meishij.net/zt/images/fl_renqun_ertong2.png",
+    "title": "儿童",
+    "cidd": "111906"
+  }, {
+    "image": "//s1.c.meishij.net/images/get3/fenlei/fl_renqun_3.png",
+    "title": "幼儿",
+    "cidd": "111907"
+  }, {
+    "image": "//s1.c.meishij.net/images/get3/fenlei/fl_renqun_6.png",
+    "title": "老人",
+    "cidd": "111908"
+  }, {
+    "image": "//s1.c.meishij.net/images/get3/fenlei/fl_renqun_2.png",
+    "title": "产妇",
+    "cidd": "111909"
+  }, {
+    "image": "//s1.c.meishij.net/zt/images/fl_renqun_bailing1.png",
+    "title": "白领",
+    "cidd": "111910"
+  }, {
+    "image": "//s1.c.meishij.net/images/get3/fenlei/fl_renqun_7.png",
+    "title": "青少年",
+    "cidd": "111911"
+  }, {
+    "image": "//s1.c.meishij.net/images/get3/fenlei/fl_renqun_8.png",
+    "title": "运动员",
+    "cidd": "111912"
+  }, {
+    "image": "//s1.c.meishij.net/images/get3/fenlei/fl_renqun_10.png",
+    "title": "学前儿童",
+    "cidd": "111913"
+  }, {
+    "image": "//s1.c.meishij.net/zt/images/fl_renqun_kaosheng1.png",
+    "title": "考生",
+    "cidd": "111914"
+  }, {
+    "image": "//s1.c.meishij.net/zt/images/fl_renqun_xiaobai2.png",
+    "title": "小白",
+    "cidd": "111915"
+  }, {
+    "image": "//s1.c.meishij.net/zt/images/fl_renqun_lanren2.png",
+    "title": "懒人",
+    "cidd": "111916"
+  }, {
+    "image": "//s1.c.meishij.net/images/get3/fenlei/fl_renqun_11.png",
+    "title": "学龄期儿童",
+    "cidd": "111917"
+  }, {
+    "image": "//s1.c.meishij.net/images/get3/fenlei/fl_renqun_12.png",
+    "title": "高温环境作业人群",
+    "cidd": "111918"
+  }, {
+    "image": "//s1.c.meishij.net/images/get3/fenlei/fl_renqun_13.png",
+    "title": "低温环境作业人群",
+    "cidd": "111919"
+  }, {
+    "image": "//s1.c.meishij.net/images/get3/fenlei/fl_renqun_14.png",
+    "title": "接触电离辐射人员",
+    "cidd": "111920"
+  }, {
+    "image": "//s1.c.meishij.net/images/get3/fenlei/fl_renqun_15.png",
+    "title": "接触化学毒素人员",
+    "cidd": "111921"
+  }, {
+    "image": "//s1.c.meishij.net/zt/images/fl_renqun_shuhou1.png",
+    "title": "术后",
+    "cidd": "111922"
+  }]
+}, {
+  "title": "厨具",
+  "cid": "111100",
+  "children": [{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_chuju_1.png",
+    "title": "炒锅",
+    "cidd": "1111001"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_chuju_2.png",
+    "title": "煎锅",
+    "cidd": "1111002"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_chuju_3.png",
+    "title": "蒸锅",
+    "cidd": "1111003"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_chuju_4.png",
+    "title": "汤锅",
+    "cidd": "1111004"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_chuju_5.png",
+    "title": "砂锅",
+    "cidd": "1111005"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_chuju_6.png",
+    "title": "炖锅",
+    "cidd": "1111006"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_chuju_7.png",
+    "title": "塔吉锅",
+    "cidd": "1111007"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_chuju_8.png",
+    "title": "高压锅",
+    "cidd": "1111008"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_chuju_9.png",
+    "title": "空气炸锅",
+    "cidd": "1111009"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_chuju_10.png",
+    "title": "电饭煲",
+    "cidd": "1111010"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_chuju_11.png",
+    "title": "炖盅",
+    "cidd": "1111011"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_chuju_12.png",
+    "title": "烤箱",
+    "cidd": "1111012"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_chuju_13.png",
+    "title": "冰箱",
+    "cidd": "1111013"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_chuju_14.png",
+    "title": "微波炉",
+    "cidd": "1111014"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_chuju_15.png",
+    "title": "烧烤炉",
+    "cidd": "1111015"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_chuju_16.png",
+    "title": "电饼铛",
+    "cidd": "1111016"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_chuju_17.png",
+    "title": "面包机",
+    "cidd": "1111017"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_chuju_18.png",
+    "title": "面条机",
+    "cidd": "1111018"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_chuju_19.png",
+    "title": "料理机",
+    "cidd": "1111019"
+  }] 
+},{
+    "title": "场景",
+    "cid": "111110",
+    "children": [{
+      "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_changjing_1.png",
+      "title": "二人世界",
+      "cidd": "1111101"
+    },{
+        "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_changjing_2.png",
+        "title": "野餐",
+        "cidd": "1111102"
+      },{
+        "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_changjing_3.png",
+        "title": "大姨妈来了",
+        "cidd": "1111103"
+      },{
+        "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_changjing_4.png",
+        "title": "懒人专用",
+        "cidd": "1111104"
+      },{
+        "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_changjing_5.png",
+        "title": "朋友聚餐",
+        "cidd": "1111105"
+      }]
+},{
+  "title": "疾病调理",
+  "cid": "111120",
+  "children":[{
+      "title":"皮肤",
+      "cidd":"1111201",
+      "children":[{
+          "title":"湿疹",
+          "ciddd":"11112011"
+      },{
+        "title":"荨麻疹",
+        "ciddd":"11112012"
+    },{
+        "title":"带状疱疹",
+        "ciddd":"11112013"
+    },{
+        "title":"梅毒",
+        "ciddd":"11112014"
+    },{
+        "title":"扁平疣",
+        "ciddd":"11112015"
+    },{
+        "title":"红斑狼疮",
+        "ciddd":"11112016"
+    },{
+        "title":"白癜风",
+        "ciddd":"11112017"
+    },{
+        "title":"痤疮",
+        "ciddd":"11112018"
+    },{
+        "title":"皮肤过敏",
+        "ciddd":"11112019"
+    }]    
+  },{
+    "title":"血液",
+    "cidd":"1111202",
+    "children":[{
+        "title":"糖尿病",
+        "ciddd":"11112021"
+    },{
+        "title":"白血病",
+        "ciddd":"11112022"
+    },{
+        "title":"地中海贫血",
+        "ciddd":"11112023"
+    },{
+        "title":"贫血",
+        "ciddd":"11112024"
+    },{
+        "title":"败血症",
+        "ciddd":"11112025"
+    },{
+        "title":"缺铁性贫血",
+        "ciddd":"11112026"
+    },{
+        "title":"血小板减少性紫癜",
+        "ciddd":"11112027"
+    },{
+        "title":"再生障碍性贫血",
+        "ciddd":"11112028"
+    },{
+        "title":"低钾血症",
+        "ciddd":"11112029"
+    }]
+},{
+    "title":"骨髓",
+    "cidd":"1111203",
+    "children":[{
+        "title":"多发性骨髓瘤",
+        "ciddd":"11112031"
+    },{
+        "title":"骨髓炎",
+        "ciddd":"11112032"
+    },{
+        "title":"骨髓增生异常综合征",
+        "ciddd":"11112033"
+    },{
+        "title":"骨髓移植",
+        "ciddd":"11112034"
+    },{
+        "title":"脊髓型颈椎病",
+        "ciddd":"11112035"
+    },{
+        "title":"急性脊髓炎",
+        "ciddd":"11112036"
+    },{
+        "title":"脊髓空洞症",
+        "ciddd":"11112037"
+    },{
+        "title":"颌骨囊肿",
+        "ciddd":"11112038"
+    },{
+        "title":"球麻痹",
+        "ciddd":"11112039"
+    }]
+},{
+    "title":"淋巴系统",
+    "cidd":"1111204",
+    "children":[{
+        "title":"淋巴结肿大",
+        "ciddd":"11112041"
+    },{
+        "title":"淋巴癌",
+        "ciddd":"11112042"
+    },{
+        "title":"淋巴瘤",
+        "ciddd":"11112043"
+    },{
+        "title":"淋巴结炎",
+        "ciddd":"11112044"
+    },{
+        "title":"耳后淋巴结肿大",
+        "ciddd":"11112045"
+    },{
+        "title":"肠系膜淋巴结炎",
+        "ciddd":"11112046"
+    },{
+        "title":"腹股沟淋巴结肿大",
+        "ciddd":"11112047"
+    },{
+        "title":"非霍奇金淋巴瘤",
+        "ciddd":"11112048"
+    },{
+        "title":"浅表淋巴结肿大",
+        "ciddd":"11112049"
+    }]
+},{
+    "title":"血管",
+    "cidd":"1111205",
+    "children":[{
+        "title":"静脉曲张",
+        "ciddd":"11112051"
+    },{
+        "title":"高血压",
+        "ciddd":"11112052"
+    },{
+        "title":"低血压",
+        "ciddd":"11112053"
+    },{
+        "title":"血管瘤",
+        "ciddd":"11112054"
+    },{
+        "title":"动脉硬化",
+        "ciddd":"11112055"
+    },{
+        "title":"血糖高",
+        "ciddd":"11112056"
+    },{
+        "title":"高血脂",
+        "ciddd":"11112057"
+    },{
+        "title":"动脉粥样硬化",
+        "ciddd":"11112058"
+    },{
+        "title":"血管炎",
+        "ciddd":"11112059"
+    }]
+},{
+    "title":"肌肉",
+    "cidd":"1111206",
+    "children":[{
+        "title":"筋膜炎",
+        "ciddd":"11112061"
+    },{
+        "title":"肌肉萎缩",
+        "ciddd":"11112062"
+    },{
+        "title":"肌肉痉挛",
+        "ciddd":"11112063"
+    },{
+        "title":"肌腱断裂",
+        "ciddd":"11112064"
+    },{
+        "title":"横纹肌肉瘤",
+        "ciddd":"11112065"
+    },{
+        "title":"进行性肌营养不良症",
+        "ciddd":"11112066"
+    },{
+        "title":"多发性肌炎",
+        "ciddd":"11112067"
+    },{
+        "title":"肌张力障碍",
+        "ciddd":"11112068"
+    },{
+        "title":"肌肉跳动",
+        "ciddd":"11112069"
+    }]
+},{
+    "title":"神经",
+    "cidd":"1111207",
+    "children":[{
+        "title":"坐骨神经痛",
+        "ciddd":"11112071"
+    },{
+        "title":"帕金森",
+        "ciddd":"11112072"
+    },{
+        "title":"神经病",
+        "ciddd":"11112073"
+    },{
+        "title":"神经纤维瘤",
+        "ciddd":"11112074"
+    },{
+        "title":"嗜铬细胞瘤",
+        "ciddd":"11112075"
+    },{
+        "title":"神经炎",
+        "ciddd":"11112076"
+    },{
+        "title":"运动神经元病",
+        "ciddd":"11112077"
+    },{
+        "title":"多发性硬化",
+        "ciddd":"11112078"
+    },{
+        "title":"亨廷顿舞蹈症",
+        "ciddd":"11112079"
+    }]
+},{
+    "title":"精神",
+    "cidd":"1111208",
+    "children":[{
+        "title":"抑郁症",
+        "ciddd":"11112081"
+    },{
+        "title":"失眠",
+        "ciddd":"11112082"
+    },{
+        "title":"焦虑症",
+        "ciddd":"11112083"
+    },{
+        "title":"自闭症",
+        "ciddd":"11112084"
+    },{
+        "title":"神经衰弱",
+        "ciddd":"11112085"
+    },{
+        "title":"强迫症",
+        "ciddd":"11112086"
+    },{
+        "title":"精神分裂症",
+        "ciddd":"11112087"
+    },{
+        "title":"产后抑郁症",
+        "ciddd":"11112088"
+    },{
+        "title":"梦游",
+        "ciddd":"11112089"
+    }]
+},{
+    "title":"口腔",
+    "cidd":"1111209",
+    "children":[{
+        "title":"手足口病",
+        "ciddd":"11112091"
+    },{
+        "title":"口腔溃疡",
+        "ciddd":"11112092"
+    },{
+        "title":"牙龈出血",
+        "ciddd":"11112093"
+    },{
+        "title":"牙结石",
+        "ciddd":"11112094"
+    },{
+        "title":"牙龈肿痛",
+        "ciddd":"11112095"
+    },{
+        "title":"牙疼",
+        "ciddd":"11112096"
+    },{
+        "title":"牙周炎",
+        "ciddd":"11112097"
+    },{
+        "title":"牙龈萎缩",
+        "ciddd":"11112098"
+    },{
+        "title":"龋齿",
+        "ciddd":"11112099"
+    }]
+}]
+}, {
+  "title": "脏腑调理",
+  "cid": "111130",
+  "children": [{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_1.png",
+    "title": "补心",
+    "cidd": "1111301"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_2.png",
+    "title": "养肝",
+    "cidd": "1111302"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_3.png",
+    "title": "补脾",
+    "cidd": "1111303"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_4.png",
+    "title": "养肺",
+    "cidd": "1111304"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_5.png",
+    "title": "补肾",
+    "cidd": "1111305"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_6.png",
+    "title": "补气",
+    "cidd": "1111306"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_7.png",
+    "title": "补血",
+    "cidd": "1111307"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_8.png",
+    "title": "哮喘",
+    "cidd": "1111308"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_9.png",
+    "title": "感冒",
+    "cidd": "1111309"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_10.png",
+    "title": "腹泻",
+    "cidd": "11113010"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_11.png",
+    "title": "癫痫",
+    "cidd": "11113011"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_12.png",
+    "title": "水肿",
+    "cidd": "11113012"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_13.png",
+    "title": "便秘",
+    "cidd": "11113013"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_14.png",
+    "title": "失眠",
+    "cidd": "11113014"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_15.png",
+    "title": "健忘",
+    "cidd": "11113015"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_16.png",
+    "title": "利尿",
+    "cidd": "11113016"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_17.png",
+    "title": "心悸",
+    "cidd": "11113017"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_18.png",
+    "title": "痢疾",
+    "cidd": "11113018"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_19.png",
+    "title": "呕吐",
+    "cidd": "11113019"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_20.png",
+    "title": "胃调养",
+    "cidd": "11113020"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_21.png",
+    "title": "咳喘",
+    "cidd": "11113021"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_22.png",
+    "title": "气血双补",
+    "cidd": "11113022"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_23.png",
+    "title": "活血化瘀",
+    "cidd": "11113023"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_24.png",
+    "title": "止血调理",
+    "cidd": "11113024"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_25.png",
+    "title": "疏肝理气",
+    "cidd": "11113025"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_26.png",
+    "title": "阳痿早泄",
+    "cidd": "11113026"
+  },{
+    "image": "https://s1.c.meishij.net/images/get3/fenlei/fl_zangfutiaoli_27.png",
+    "title": "自汗盗汗",
+    "cidd": "11113027"
+  }]
+}, {
+  "title": "功能性调理",
+  "cid": "111140",
+  "children":[{
+      "title":"美容塑形",
+      "cidd":"1111401",
+      "children":[{
+          "title":"减肥",
+          "ciddd":"11114011"
+      },{
+        "title":"皮肤瘙痒",
+        "ciddd":"11114012"
+    },{
+        "title":"丰胸",
+        "ciddd":"11114013"
+    },{
+        "title":"瘦腿",
+        "ciddd":"11114014"
+    },{
+        "title":"瘦脸",
+        "ciddd":"11114015"
+    },{
+        "title":"祛斑",
+        "ciddd":"11114016"
+    },{
+        "title":"美白",
+        "ciddd":"11114017"
+    },{
+        "title":"美容",
+        "ciddd":"11114018"
+    },{
+        "title":"祛痘",
+        "ciddd":"11114019"
+    }]    
+  },{
+    "title":"养生",
+    "cidd":"1111402",
+    "children":[{
+        "title":"补肾",
+        "ciddd":"11114021"
+    },{
+        "title":"养肝",
+        "ciddd":"11114022"
+    },{
+        "title":"养胃",
+        "ciddd":"11114023"
+    },{
+        "title":"补气",
+        "ciddd":"11114024"
+    },{
+        "title":"提高免疫力",
+        "ciddd":"11114025"
+    },{
+        "title":"补血",
+        "ciddd":"11114026"
+    },{
+        "title":"清热解毒",
+        "ciddd":"11114027"
+    },{
+        "title":"止咳",
+        "ciddd":"11114028"
+    },{
+        "title":"解暑",
+        "ciddd":"11114029"
+    }]
+},{
+    "title":"调养",
+    "cidd":"1111403",
+    "children":[{
+        "title":"中暑",
+        "ciddd":"11114031"
+    },{
+        "title":"便秘",
+        "ciddd":"11114032"
+    },{
+        "title":"肾虚",
+        "ciddd":"11114033"
+    },{
+        "title":"痛经",
+        "ciddd":"11114034"
+    },{
+        "title":"内分泌失调",
+        "ciddd":"11114035"
+    },{
+        "title":"肾阴虚",
+        "ciddd":"11114036"
+    },{
+        "title":"肾阳虚",
+        "ciddd":"11114037"
+    },{
+        "title":"喉咙痛",
+        "ciddd":"11114038"
+    },{
+        "title":"月经不调",
+        "ciddd":"11114039"
+    }]
+},{
+    "title":"孕产哺乳",
+    "cidd":"1111404",
+    "children":[{
+        "title":"宫外孕",
+        "ciddd":"11114041"
+    },{
+        "title":"怀孕",
+        "ciddd":"11114042"
+    },{
+        "title":"孕妇",
+        "ciddd":"11114043"
+    },{
+        "title":"哺乳期",
+        "ciddd":"11114044"
+    },{
+        "title":"怀孕初期",
+        "ciddd":"11114045"
+    },{
+        "title":"乳腺炎",
+        "ciddd":"11114046"
+    },{
+        "title":"孕吐",
+        "ciddd":"11114047"
+    },{
+        "title":"坐月子",
+        "ciddd":"11114048"
+    },{
+        "title":"前置胎盘",
+        "ciddd":"11114049"
+    }]
+},{
+    "title":"微量元素",
+    "cidd":"1111405",
+    "children":[{
+        "title":"硒",
+        "ciddd":"11114051"
+    },{
+        "title":"镍",
+        "ciddd":"11114052"
+    },{
+        "title":"铜",
+        "ciddd":"11114053"
+    },{
+        "title":"铬",
+        "ciddd":"11114054"
+    },{
+        "title":"锡",
+        "ciddd":"11114055"
+    },{
+        "title":"铁",
+        "ciddd":"11114056"
+    },{
+        "title":"锌",
+        "ciddd":"11114057"
+    },{
+        "title":"氟",
+        "ciddd":"11114058"
+    },{
+        "title":"硅",
+        "ciddd":"11114059"
+    }]
+},{
+    "title":"维生素",
+    "cidd":"1111406",
+    "children":[{
+        "title":"维生素C",
+        "ciddd":"11114061"
+    },{
+        "title":"维生素E",
+        "ciddd":"11114062"
+    },{
+        "title":"维生素B",
+        "ciddd":"11114063"
+    },{
+        "title":"叶酸",
+        "ciddd":"11114064"
+    },{
+        "title":"维生素B6",
+        "ciddd":"11114065"
+    },{
+        "title":"维生素B2",
+        "ciddd":"11114066"
+    },{
+        "title":"维生素B1",
+        "ciddd":"11114067"
+    },{
+        "title":"维生素A",
+        "ciddd":"11114068"
+    },{
+        "title":"维生素D",
+        "ciddd":"11114069"
+    }]
+},{
+    "title":"营养元素",
+    "cidd":"1111407",
+    "children":[{
+        "title":"水",
+        "ciddd":"11114071"
+    },{
+        "title":"碳水化合物",
+        "ciddd":"11114072"
+    },{
+        "title":"蛋白质",
+        "ciddd":"11114073"
+    },{
+        "title":"脂肪",
+        "ciddd":"11114074"
+    },{
+        "title":"膳食纤维",
+        "ciddd":"11114075"
+    },{
+        "title":"无机盐",
+        "ciddd":"11114076"
+    }]
+}]
+}, {
+  "title": "工艺",
+  "cid": "111150",
+  "children": [{
+    "title": "炒",
+    "cidd": "1111501"
+  },{
+    "title": "蒸",
+    "cidd": "1111502"
+  },{
+    "title": "煮",
+    "cidd": "1111503"
+  },{
+    "title": "炖",
+    "cidd": "1111504"
+  },{
+    "title": "拌",
+    "cidd": "1111505"
+  },{
+    "title": "烧",
+    "cidd": "1111506"
+  },{
+    "title": "煎",
+    "cidd": "1111507"
+  },{
+    "title": "炸",
+    "cidd": "1111508"
+  },{
+    "title": "烘培",
+    "cidd": "1111509"
+  },{
+    "title": "微波",
+    "cidd": "11115010"
+  },{
+    "title": "烤",
+    "cidd": "11115011"
+  },{
+    "title": "煲",
+    "cidd": "11115012"
+  },{
+    "title": "焖",
+    "cidd": "11115013"
+  },{
+    "title": "冻",
+    "cidd": "11115014"
+  },{
+    "title": "烙",
+    "cidd": "11115015"
+  },{
+    "title": "砂锅",
+    "cidd": "11115016"
+  },{
+    "title": "腌",
+    "cidd": "11115017"
+  },{
+    "title": "卤",
+    "cidd": "11115018"
+  },{
+    "title": "酱",
+    "cidd": "11115019"
+  },{
+    "title": "烩",
+    "cidd": "11115020"
+  },{
+    "title": "扒",
+    "cidd": "11115021"
+  },{
+    "title": "爆",
+    "cidd": "11115022"
+  },{
+    "title": "炝",
+    "cidd": "11115023"
+  },{
+    "title": "熘",
+    "cidd": "11115024"
+  },{
+    "title": "熏",
+    "cidd": "11115025"
+  },{
+    "title": "汆",
+    "cidd": "11115026"
+  },{
+    "title": "拔丝",
+    "cidd": "11115027"
+  },{
+    "title": "榨汁",
+    "cidd": "11115028"
+  },{
+    "title": "灼",
+    "cidd": "11115029"
+  },{
+    "title": "泡",
+    "cidd": "11115030"
+  },{
+    "title": "腊",
+    "cidd": "11115031"
+  },{
+    "title": "糖蘸",
+    "cidd": "11115032"
+  },{
+    "title": "干锅",
+    "cidd": "11115033"
+  },{
+    "title": "焗",
+    "cidd": "11115034"
+  },{
+    "title": "干煸",
+    "cidd": "11115035"
+  },{
+    "title": "煨",
+    "cidd": "11115036"
+  },{
+    "title": "其他",
+    "cidd": "11115037"
+  }]
+}, {
+  "title": "时间",
+  "cid": "111160",
+  "children": [{
+    "title": "<5分钟",
+    "cidd": "1111601"
+  },{
+    "title": "<10分钟",
+    "cidd": "1111602"
+  },{
+    "title": "<15分钟",
+    "cidd": "1111603"
+  },{
+    "title": "<30分钟",
+    "cidd": "1111604"
+  },{
+    "title": "<60分钟",
+    "cidd": "1111605"
+  },{
+    "title": "<90分钟",
+    "cidd": "1111606"
+  },{
+    "title": "<2小时",
+    "cidd": "1111607"
+  },{
+    "title": "2小时以上",
+    "cidd": "1111608"
+  }]
+}, {
+  "title": "口味",
+  "cid": "111170",
+  "children": [{
+    "title": "家常味",
+    "cidd": "1111701"
+  },{
+    "title": "香辣味",
+    "cidd": "1111702"
+  },{
+    "title": "咸鲜味",
+    "cidd": "1111703"
+  },{
+    "title": "甜味",
+    "cidd": "1111704"
+  },{
+    "title": "酸甜味",
+    "cidd": "1111705"
+  },{
+    "title": "酸辣味",
+    "cidd": "1111706"
+  },{
+    "title": "麻辣味",
+    "cidd": "1111707"
+  },{
+    "title": "酱香味",
+    "cidd": "1111708"
+  },{
+    "title": "奶香味",
+    "cidd": "1111709"
+  },{
+    "title": "蒜香味",
+    "cidd": "11117010"
+  },{
+    "title": "鱼香味",
+    "cidd": "11117011"
+  },{
+    "title": "葱香味",
+    "cidd": "11117012"
+  },{
+    "title": "果味",
+    "cidd": "11117013"
+  },{
+    "title": "五香味",
+    "cidd": "11117014"
+  },{
+    "title": "咖喱味",
+    "cidd": "11117015"
+  },{
+    "title": "椒麻味",
+    "cidd": "11117016"
+  },{
+    "title": "茄汁味",
+    "cidd": "11117017"
+  },{
+    "title": "酸味",
+    "cidd": "11117018"
+  },{
+    "title": "苦香味",
+    "cidd": "11117019"
+  },{
+    "title": "姜汁味",
+    "cidd": "11117020"
+  },{
+    "title": "怪味",
+    "cidd": "11117021"
+  },{
+    "title": "芥末味",
+    "cidd": "11117022"
+  },{
+    "title": "红油味",
+    "cidd": "11117023"
+  },{
+    "title": "豆瓣味",
+    "cidd": "11117024"
+  },{
+    "title": "麻酱味",
+    "cidd": "11117025"
+  },{
+    "title": "黑椒味",
+    "cidd": "11117026"
+  },{
+    "title": "糊辣味",
+    "cidd": "11117027"
+  },{
+    "title": "其他",
+    "cidd": "11117028"
+  }]
+}]

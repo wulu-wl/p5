@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/react.js"></script>
+    <script src="./js/react-dom.js"></script>
+    <script src="./js/babel.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <div>
+            <input type="text">
+            <h1>input的值是 ：xxx</h1>
+        </div> -->
+
+    </div>
+    <script type="text/babel">
+        // 1、切分组件
+        //2、 将组件拼接成页面 渲染
+        //3、设置 input 和 h1的 初始值(state)
+        //4、 将 初始值(state) 渲染到 input  和 h1
+        //5、 当 input 发生改变 修改 初始值(state)
+
+        //受控组件：使 React 的 state 成为“唯一数据源”。
+        //渲染表单的 React 组件还控制着用户输入过程中表单发生的操作。
+        //被 React 以这种方式控制取值的表单输入元素就叫做“受控组件”
+
+        // 表单的 值 是 state  表单的改变 是修改 state 的值 ，这样的表单元素叫做 受控组件
+        class Myinput extends React.Component{
+            constructor(){
+                super();
+                this.state={
+                    a:123,
+                  
+                }
+            }
+            euser=(event)=>{
+                // console.log(event.target.value)
+                this.setState({
+                    a:event.target.value
+                })
+            }
+            
+            render(){
+                return(
+                     <div>
+                        <input type="text" value={this.state.a} onChange={(e)=>this.euser(e)} />
+                        <h1>input的值是 ：{this.state.a}</h1>
+                      
+                    </div>  
+                )
+            }
+        }
+        ReactDOM.render(
+            <Myinput></Myinput>,
+            document.getElementById("app")
+
+        )
+    </script>
+</body>
+
+</html>

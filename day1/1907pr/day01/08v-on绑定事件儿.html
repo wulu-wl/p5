@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{msg}}
+        <br/>
+        <!-- 事件儿指令 -->
+        <!-- <button v-on:click="go">点击</button> -->
+        <!-- 缩写 @ -->
+        <!-- <button @click="go">点击</button> -->
+        <!-- 带默认事件儿  阻止-->
+        <a href="http://www.baidu.com" @click.prevent="go">点我跳转页面</a>
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+
+    // function P(){
+    //     this.name="20"
+    //     this.go=()=>{
+    //         console.log(this.name)
+    //     }
+    // }
+
+    new Vue({
+        el:"#app",
+        data:{
+            msg:"hello",
+            go(){
+                console.log("1")
+            }
+        },
+        // vue封装的专门放置方法的地方
+        // methods:{
+        //     go(){
+        //         console.log(this.msg)
+        //     }
+        // }
+    })
+</script>
+</html>

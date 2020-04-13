@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .active{
+            background: green;
+        }
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- 第一种方式class -->
+        <!-- <div :class="{active:active}">{{msg}}</div> -->
+        <!-- 第四种写法 bol类型 -->
+        <!-- <div :class="{active:isActive,red:isRed}">{{msg+'娃哈哈'}}</div> -->
+
+        <!-- 第二种方式style -->
+        <!-- <div v-bind:style="{background:bg,fontSize:fontSize+'px'}">{{msg}}</div> -->
+        <!-- 第三种写法 数组形式 -->
+        <!-- <div v-bind:style="[bg,color]">{{msg}}</div> -->  
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            msg:"hello 1907",
+            bg:{
+                background:"cyan"
+            },
+            color:{
+                color:"red"
+            },
+            fontSize:30,
+            isActive:true,
+            isRed:true
+        }
+    })
+</script>
+</html>

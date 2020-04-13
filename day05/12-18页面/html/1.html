@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/1.css">
+</head>
+
+<body>
+    <div id="app">
+        <router-view></router-view>
+    </div>
+    <!-- 首页 -->
+    <template id="index">
+        <div class="index">
+            <com1></com1>
+            <com2></com2>
+            <com3></com3>
+            <com4></com4>
+        </div>
+    </template>
+    <!-- 发现 -->
+    <!-- <template id="dis">
+        <div class="dis">
+            发现页面
+        </div>
+    </template> -->
+    <!-- 订单 -->
+    <!-- <template id="order">
+        <div class="order">
+            订单页面
+        </div>
+    </template> -->
+    <!-- 我的 -->
+    <!-- <template id="my">
+        <div class="my">
+            我的页面
+        </div>
+    </template> -->
+    <!-- 底部路由跳转 -->
+     <template id="page">
+        <div>
+            <router-view></router-view>
+            <div class="bottom">
+                <router-link to="index">
+                    <figure><img src="../img/dz_65.jpg" alt="">
+                        <figcaption>首页</figcaption>
+                    </figure>
+                </router-link>
+                <router-link to="dis">
+                    <figure><img src="../img/dz_68.jpg" alt="">
+                        <figcaption>发现</figcaption>
+                    </figure>
+                </router-link>
+                <router-link to="order">
+                    <figure><img src="../img/dz_70.jpg" alt="">
+                        <figcaption>订单</figcaption>
+                    </figure>
+                </router-link>
+                <router-link to="my">
+                    <figure><img src="../img/dz_62.jpg" alt="">
+                        <figcaption>我的</figcaption>
+                    </figure>
+                </router-link>
+            </div>
+        </div>
+    </template>
+    <!-- <script type="text/template" id="com1">
+        <div class="header">
+                <select>
+                    <option value="上海">上海</option>
+                    <option value="北京">北京</option>
+                </select>
+                <router-link to="/search">
+                    <input type="text" placeholder="全程热搜">
+                </router-link>
+                 <p>+</p>
+            </div>
+        </script>
+    <script type="text/template" id="com2">
+        <nav>       
+                <figure  v-for="item in arr">
+                     <img :src="item.img" alt="">
+                     <figcaption>{{item.title}}</figcaption>
+                </figure>
+            </nav>
+        </script>
+    <script type="text/template" id="com3">
+        <div class="zhong"></div>
+        </script>
+    <script type="text/template" id="com4">
+        <div class="con">
+                <p>猜你喜欢</p>
+                <router-link :to="{path:'/xq'}" v-for="(item,index) in arr1" class="red">
+                    <dl>
+                        <dt><img :src="item.img" alt=""></dt>
+                        <dd>
+                            <p>{{item.title}}</p>
+                            <span>{{item.address}}{{item.eg}}</span>
+                            <div class="dd-one">
+                                 <span class="dd-two">{{item.pri}}<i>元</i></span>
+                                 <p class="dd-three">{{item.old_pri}}</p>
+                                 <p class="dd-four">{{item.buy}}</p>
+                            </div>
+                        </dd>
+                    </dl>
+                </router-link>
+             
+            </div>
+        </script> -->
+    <!-- 搜索页面 -->
+    <!-- <template id="search">
+        <div class="search">
+            <div class="search-header">
+                <span>&lt;</span>
+                <h3>搜索页面</h3>
+            </div>
+            <input type="search" v-model="search" placeholder="请输入搜索内容"><br>
+
+            <ul v-for="item in get">
+                <li v-for="i in item.children">{{i}}</li>
+
+            </ul> -->
+
+            <!-- <button @click="ss">搜索</button> -->
+        <!-- </div>
+    </template> -->
+
+</body>
+<script src="../vue.js"></script>
+<script src="../vue-router.js"></script>
+<script src="../axios.js"></script>
+<script>
+    // Vue.component('com1', {
+    //     template: '#com1'
+    // })
+    // Vue.component('com2', {
+    //     template: '#com2',
+    //     data() {
+    //         return {
+    //             arr: []
+    //         }
+    //     },
+    //     mounted(){
+    //         axios({
+    //             method:'get',
+    //             url:'http://localhost:8000/show',
+    //             data:{},
+    //         }).then((res)=>{
+    //             // console.log(res)
+    //             this.arr=res.data
+    //             // console.log(this.arr)
+    //         })
+    //     }
+
+    // })
+    // Vue.component('com3', {
+    //     template: '#com3'
+    // })
+    // Vue.component('com4', {
+    //     template: '#com4',
+    //     data() {
+    //         return {
+    //             arr1: []
+    //         }
+    //     },
+    //     mounted(){
+    //         axios({
+    //             method:"post",
+    //             url:"http://localhost:8000/shopshow",
+    //             data:{},
+    //         }).then((res)=>{
+    //             // console.log(res)
+    //             this.arr1=res.data;
+    //             // console.log(this.arr1)
+    //         })
+    //     },
+
+    // })
+    // let index = {
+    //     template: "#index"
+    // }
+    // let dis = {
+    //     template: "#dis"
+    // }
+    // let order = {
+    //     template: "#order"
+    // }
+    // let my = {
+    //     template: "#my"
+    // }
+    // let search = {
+    //     template: "#search",
+    //     data() {
+    //         return {
+    //             search: '',
+    //             arr: [{
+    //                 name: "水果",
+    //                 children: ['苹果', '香蕉', '橘子']
+    //             }, {
+    //                 name: "蔬菜",
+    //                 children: ['白菜', "花菜", "韭菜"]
+    //             }, {
+    //                 name: "肉",
+    //                 children: ["鸡肉", "鸭肉", "鱼肉"]
+    //             }]
+    //         }
+    //     },
+    //     computed: {
+    //         get() {
+    //             if (this.search) {
+    //                 let arr1 = this.arr.filter((item) => {
+    //                     return item.name.includes(this.search)
+    //                 })
+    //                 return arr1
+
+    //             } else {
+    //                 return []
+    //             }
+    //         }
+    //     }
+
+    // }
+    let page = {
+        template: '#page'
+    }
+    let routes = [{
+        path: "/page",
+        component: page,
+        children: [{ path: '/index', component: index },
+        { path: '/order', component: order },
+        { path: '/dis', component: dis },
+        { path: '/my', component: my },]
+    },
+    { path: "/search", component: search },
+    { path: '*', redirect: "/index" },]
+
+    let router = new VueRouter({ routes })
+    new Vue({
+        el: "#app",
+        data: {},
+        components: {
+            search
+        },
+        router
+    })
+</script>
+
+</html>

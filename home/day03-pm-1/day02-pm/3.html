@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 给 div 加边框 -->
+        <!-- <div v-border>111</div> -->
+        <div v-border="'red'">999</div>
+        <div v-border="'blue'">999</div>
+        <div v-bgcolor="'red'">背景颜色</div>
+
+    </div>
+    <script>
+
+        Vue.directive("border", {
+            inserted: function (el, binding, vnode) {
+                console.log(binding.value)
+                console.log(vnode)//虚拟dom对象
+                el.style.border = "1px solid " + binding.value
+            }
+        })
+
+        const vm = new Vue({
+            el: "#app",
+            directives: {
+                "bgcolor": {
+                    inserted: function (el, binding) {
+                        el.style.background = binding.value
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

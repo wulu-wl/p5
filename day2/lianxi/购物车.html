@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1 width="100%" style="text-align: center;">商品区</h1>
+        <table width="400px" border="1" cellspacing="0" style="text-align: center; margin: 30px auto;">
+            <thead>
+                <tr>
+                    <th>商品名称</th>
+                    <th>价格</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(item,index) in arr">
+                    <td>{{item.name}}</td>
+                    <td>{{item.price}}</td>
+                    <td @click="add(index)">购买</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 width="100%" style="text-align: center;">购物车</h1>
+        <table width="400px" border="1" cellspacing="0" style="text-align: center; margin: 30px auto;">
+            <thead>
+                <tr>
+                    <th>商品名称</th>
+                    <th>数量</th>
+                    <th>价格</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(item,i) in shopArr">
+                    <td>{{item.name}}</td>
+                    <td>{{item.num}}</td>
+                    <td>{{item.num*item.price}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    let vm=new Vue({
+        el:"#app",
+        data:{
+            arr:[{
+                name:"商品1",
+                price:10,
+            },{
+                name:"商品2",
+                price:1,
+            },{
+                name:"商品3",
+                price:5,
+            },],
+            shopArr:[],
+        },
+        methods:{
+            add(i){
+                this.arr[i].num=1
+                this.shopArr.push(this.arr[i])
+                if(this.shopArr.length==0){
+                    this.shopArr.num==1
+                }
+            }
+        }
+    })
+</script>
+</html>

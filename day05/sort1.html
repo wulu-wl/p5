@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>输入数值</p>
+    <input type="text"/>
+    <button>测试</button>
+    <p class="p"></p>
+</body>
+<script>
+    // let arr=[1,2,3,4,5,6]
+    // let temp=arr.reduce((x,y,z)=>{
+    //     console.log('x'+x)
+    //     console.log('y'+y)
+    //     console.log('z'+z)
+    //     return (x+y)
+    // })
+    // console.log(temp)//21
+
+    // let arr = [1, 2, [3, 4], [[5, 6], 7], 8]
+
+    // let temp=arr.reduce((x,y,z)=>{
+    //     console.log('x'+x)
+    //     console.log('y'+y)
+    //     // console.log('z'+z)   
+    //     return (x+y)
+    // })
+    // console.log(temp)
+
+
+
+    // let arr1 = []
+    // function arrmap(arr) {
+    //     for (let i = 0; i < arr.length; i++) {
+           
+    //         if (Array.isArray(arr[i])) {
+    //             arrmap(arr[i])
+    //         } else {
+    //             arr1.push(arr[i])
+    //         }
+    //     }
+    // }
+    // arrmap(arr)
+    // console.log(arr1)
+    
+    // function arrmap(arr) { 
+    //     //split是字符串的方法  先讲数组变成字符串   arr+''  然后按，切割成数组
+    //   let arr1=(arr+'').split(',') // ["1", "2", "3", "4", "5", "6", "7", "8"]
+    //    let arr2 =arr1.map((item)=>{
+        //将每一项拼接成数字
+    //         return item * 1
+    //     })
+    //     return arr2
+    //  }
+    //  console.log(arrmap(arr))
+
+    // let  arr1=[2,2,2,4,4,4,6,7]
+    // console.log(new Set(arr1))
+
+
+    // //测试try和catch
+    // function  aa() {
+    //     try{
+    //     let num=document.querySelector('input').value
+    //     if(num=="") throw "没有数字"
+    //     if (num>10) throw "大"
+    //     if (num<5) throw "小"
+    //     if (isNaN(num)) throw "不是数字"
+    // }catch(err){
+    //     let p=document.querySelector('.p')
+    //     p.innerHTML="错误原因"+":"+err
+    // }
+    // }
+    
+    // let btn=document.querySelector('button')
+    // btn.onclick=function () { 
+    //     aa()
+    //  }
+
+
+    // //push返回值
+    // let arr1=[1,2,3]
+    // console.log(arr1.push(4))
+
+    //slice splice
+    let arr1=[1,2,3]
+    // console.log(arr1.slice(1))//返回切割完之后的数组
+    // console.log(arr1)//不会改变原数组
+    console.log(arr1.splice(0,1))
+    console.log(arr1)  //会改变原数组
+</script>
+
+</html>

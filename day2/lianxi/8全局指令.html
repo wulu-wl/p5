@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{msg}}
+        <input type="text" v-aaa>
+    </div>
+    <hr/>
+     <div id="app1">
+        {{msg1}}
+        <input type="text" v-aaa>
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    Vue.directive('aaa',{
+        'inserted':(el)=>{
+            el.style.width='100px'
+            el.style.height='100px'
+            el.style.border='1px solid #f00'
+        }
+    })
+    new Vue({
+        el:'#app',
+        data:{
+            msg:"全局指令"
+        }
+
+    })
+
+    new Vue({
+        el:"#app1",
+        data:{
+            mag1:"全局指令1"
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="firstName"/><br/>
+        <input type="text" v-model="lastName"/><br/>
+        <!-- <input type="text" v-model="fullName"/><br/> -->
+        {{fullName}}
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script src="./vue-router.js"></script>
+<script>
+    let vm=new Vue({
+        el:'#app',
+        data:{
+            firstName:"",
+            lastName:"",
+            fullName:""
+        },
+        computed:{},
+        watch:{
+            // firstName和lastName都是data中的数据  
+            // 计算属性和watch的区别
+            // 计算属性有缓存
+            // watch 浪费性能 firstName 从新计算firstName  
+            firstName(){
+                this.fullName=this.firstName+this.lastName;
+            },
+            lastName(){
+                this.fullName=this.firstName+this.lastName;
+            }
+        }
+    })
+    // 深度监听
+</script>
+</html>

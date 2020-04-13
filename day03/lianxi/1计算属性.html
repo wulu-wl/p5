@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        姓： <input type="text"  v-model="xing"/><br>
+        名： <input type="text"  v-model="ming"/><br>
+        姓名： {{xm}} <br>
+        <button @click="pin">点击</button>
+    </div>
+    <hr/>
+    <div id="app1">
+        姓： <input type="text"  v-model="xing"/><br>
+        名： <input type="text"  v-model="ming"/><br>
+        姓名：{{jie}}
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            xing:'',
+            ming:'',
+            xm:''
+        },
+        
+        methods:{
+            pin(){
+                this.xm=this.xing+this.ming
+            }
+        }
+    })
+    new Vue({
+        el:"#app1",
+        data:{
+            xing:'',
+            ming:'',
+        },
+        
+        computed:{
+            jie(){
+                return this.xing+this.ming
+            }
+        }
+    })
+
+</script>
+</html>

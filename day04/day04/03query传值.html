@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <router-link :to="{path:'/user/aa',query:{name:'shao',age:'28'}}">aa</router-link>
+        <router-link :to="{path:'/user/bb',query:{name:'cheng',age:'18'}}">bb</router-link>
+        <router-link :to="{path:'/user/cc',query:{name:obj.username,age:obj.age}}">cc</router-link>
+        <router-view></router-view>
+        <button @click="fn">点击查看路由传值对象</button>
+    </div>
+    <template id="user">
+        <div class="user">
+            {{$route.query}}
+        </div>
+    </template>
+</body>
+<script src="./vue.js"></script>
+<script src="./vue-router.js"></script>
+<script>
+    let user={
+        template:'#user'
+    }
+    let routes=[{
+        // 前面是公共组件儿,后面是传值(变量)
+        path:"/user/:userName",
+        component:user
+    }]
+    let router=new VueRouter({
+        routes
+    })
+    let vm=new Vue({
+        el:"#app",
+        data:{
+            obj:{
+                username:"fa",
+                age:"20"
+            }
+        },
+        router,
+        methods:{
+            fn(){
+                console.log(this.$route)
+            }
+        }
+    })
+    // query传值的特点  
+    // 1.配合path动态路由  一个公共组件儿搭载多个路由文件
+    // 2.query传值可以穿对象
+    // 3.在地址栏中暴露
+</script>
+</html>

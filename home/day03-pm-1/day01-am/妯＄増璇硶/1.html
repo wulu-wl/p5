@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+    <style>
+        .h5-1 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{a}}</h1>
+        <h2>{{ 2+3 }}</h2>
+        <h2>{{ b+c }}*****{{b-c}}</h2>
+        <!-- <h3>{{ c > b?"大":"小" }}</h3> -->
+        <h4>{{ "的房间阿里斯顿放辣椒水的分类及阿里山" }}</h4>
+        <h5 class="h5-1">啊啊啊啊啊啊啊</h5>
+        <!-- 错误 -->
+        <!-- <h5 class="{{b}}">哦哦哦哦哦</h5> -->
+        <h5 v-bind:class="b" v-bind:title="a"></h5>
+        <div>
+            {{e}}
+        </div>
+
+        <div v-html="e"></div>
+
+
+    </div>
+    <script>
+        let vm = new Vue({
+            el: " #app", data: {
+                a: "123", b: 4, c: 5, d: "h5-1",
+                e: "<span>8888888</span>"
+            }
+        }) 
+    </script>
+</body>
+
+</html>

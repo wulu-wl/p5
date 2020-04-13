@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .bottom{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            position: fixed;
+            bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="bottom">
+            <router-link to="/index">首页</router-link>
+            <router-link to="/my">我的</router-link>
+            <router-link to="dis">发现</router-link>
+            <router-link to="/order">订单</router-link>
+        </div>
+        <router-view></router-view>
+    </div>
+    <tempalte></tempalte>
+</body>
+<script src="./vue.js"></script>
+<script src="./vue-router.js"></script>
+<script>
+    let  index={
+        template:`#index`
+    }
+    let  my={
+        template:`<div>我的内容</div>`
+    }
+    let  order={
+        template:`<div>订单内容</div>`
+    }
+    let  dis={
+        template:`<div>发现内容</div>`
+    }
+    let aa={
+        template:`<div>aa的内容</div>`
+    }
+    let bb={
+        template:`<div>bb的内容</div>`
+    }
+    let routes=[{path:'/index',component:index,
+    children:[{path:'/aa',component:aa},{path:'/bb',component:bb}]},
+    {path:'/order',component:order},
+    {path:'/dis',component:dis},
+    {path:'/my',component:my},
+    {path:'*',redirect:'/index'},]
+
+    let router=new VueRouter({routes})
+    new Vue({
+        el:"#app",
+        components:{
+            index,my,order,dis
+        },
+        router
+    })
+</script>
+</html>

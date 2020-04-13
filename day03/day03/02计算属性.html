@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        姓:<input type="text" v-model="firstName"/><br/>
+        名:<input type="text" v-model="lastName"/><br/>
+        全名:{{jie}}<br/>
+        <!-- <button @click="pin">点击一下</button> -->
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    let vm=new Vue({
+        el:"#app",
+        data:{
+            firstName:"",
+            lastName:"",
+            fullName:""
+        },
+        // methods:{
+        //     // 得到这个全名,浏览器刷新页面的时候,或者有操作的时候,每一次都会从新计算你的firstName和lastName
+        //     pin(){
+        //         this.fullName=this.firstName+this.lastName
+        //     }
+        // },
+        computed:{
+            jie(){
+                return this.firstName+this.lastName
+            }
+        }
+    })
+</script>
+</html>

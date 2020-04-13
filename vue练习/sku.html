@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>1</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			let specs = [
+				{"id":"17","caption":"颜色","types":["黑","棕"]},
+				{"id":"23","caption":"材质","types":["牛皮","nihao","ll"]},
+				{"id":"24","caption":"尺码","types":["40","41","42"]},
+			];
+			function generateItems(specs){
+				let result = [];
+				let index = 0;
+				let obj = {};
+				while(index<specs.length){
+					if(index == 0){
+						for(let i=0 ; i<specs[index].types.length ; i++){
+							obj[specs[index].id] = specs[index].types[i];
+							result.push({...obj});
+						}
+					}else{
+						//将之前的数据复制一份
+						let clone = [...result];
+						result = [];
+						for(let j=0 ; j<specs[index].types.length ; j++){
+							for(let item of clone){
+								let obj = {...item};
+								obj[specs[index].id] = specs[index].types[j];
+								result.push(obj);
+							}
+						}
+					}
+					index++;
+				}
+				return result;
+			}
+			console.log(generateItems(specs));
+			
+			1.
+			async function setIntervalWaitable(callback, ms){
+				const resp = await callback();
+				console.log(resp);
+				// this.rows = resp.rows;
+				let timer = setTimeout(()=>{
+					clearTimeout(timer);
+					setIntervalWaitable(callback, ms);
+				},ms);
+			}
+			setIntervalWaitable(getNewStatistics,500);
+			//模拟获取数据的函数
+			function getNewStatistics(){
+				return new Promise((resolve,reject)=>{
+					setTimeout(()=>{
+						resolve("data");
+					},1000)
+				})
+			}
+			
+			//2.
+			// async function setIntervalWaitable(callback, ms){
+			// 	let resp;
+			// 	let timer = setTimeout(()=>{
+			// 		clearTimeout(timer);
+			// 		//判断resp是否有值
+			// 		if(resp){
+			// 			console.log(resp);
+			// 			setIntervalWaitable(callback, ms);
+			// 		}else{
+			// 			let timerInterval = setInterval(()=>{
+			// 				if(!resp) return;
+			// 				clearInterval(timerInterval);
+			// 				console.log(resp);
+			// 				setIntervalWaitable(callback, ms);
+			// 			})
+			// 		}
+			// 	},ms);
+			// 	resp = await callback();
+			// }
+			// setIntervalWaitable(getNewStatistics,500);
+			// //模拟获取数据的函数
+			// function getNewStatistics(){
+			// 	return new Promise((resolve,reject)=>{
+			// 		setTimeout(()=>{
+			// 			resolve("data");
+			// 		},1000)
+			// 	})
+			// }
+		</script>
+	</body>
+</html>

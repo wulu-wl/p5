@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/home/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{'abcde'|da(1)|da(3)|da(5)}}</p>
+    </div>
+</body>
+<script>
+    let vm=new Vue({
+        el:"#app",
+        data:{
+            
+        },
+        filters:{
+            "da":function(x,y){
+                // console.log(x,y)
+                //y为下标
+                let arr=[];
+                for(var i in x){
+                    console.log(i)
+                    // console.log(x[i])
+                    if(i==y){
+                        arr.push(x[i].toUpperCase())
+                    }else{
+                        arr.push(x[i])
+                    }
+                }
+               return arr.join('')
+            }
+
+            
+        }
+    })
+</script>
+</html>

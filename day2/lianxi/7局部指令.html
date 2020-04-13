@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+        <input type="text" v-aaa>
+        <div v-bbb></div>
+    </div>
+    <div id="app1">
+        <div v-bbb></div>
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    //局部自定义指令
+   new Vue({
+      el:"#app",
+      data:{
+          msg:"局部自定义指令"
+      },
+      directives:{
+          "aaa":{
+              "inserted":(el)=>{
+                 el.focus()
+              }
+          },
+          'bbb':{
+              inserted:(el)=>{
+                el.style.width='100px',
+                el.style.height='100px',
+                el.style.border='1px solid #f00',
+                el.style.marginTop="20px"
+              }
+          }
+      }
+   })
+   
+   new Vue({
+       el:'#app1',
+       data:{},
+       
+   })
+</script>
+</html>

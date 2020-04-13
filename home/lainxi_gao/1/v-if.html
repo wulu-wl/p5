@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- v-if根据条件判断若条件等于9则显示内容 -->
+        <!-- <h1 v-if="a==9">{{msg}}</h1> -->
+        <h1 v-if="active">{{msg}}</h1>
+        <!-- v-if是根据条件进行渲染如果条件为真进行渲染，如果条件为假则不进行渲染 -->
+        <!-- v-if是操作dom节点 -->
+        <!-- v-show -->
+        <!-- <h1 v-show="a==8">{{msg}}</h1> -->
+        <h1 v-show="active">{{msg}}</h1>
+        <!-- v-show则是操作dom元素通过display:none和display:block及性能控制 频繁切换时建议使用v-show-->
+    </div>
+</body>
+<script>
+    let vm=new Vue({
+        el:"#app",
+        data:{
+            msg:"v-if/v-show练习页面",
+            active:false,
+            a:8
+        }
+    })
+</script>
+</html>

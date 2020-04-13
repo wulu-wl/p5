@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+    <script src="./vue-router.js"></script>
+</head>
+<body>
+    <div id="app">
+        <router-link to="/page1">路由一</router-link>
+        <router-link to="/page2">路由二</router-link>
+        <router-link to="/page3">路由三</router-link>
+        <router-view></router-view>
+    </div>
+    <!-- login组件 -->
+    <template id="login">
+        <div class="login">
+            用户名:<input type="text">
+            密码: <input type="text">
+            <button>登陆</button>
+        </div>
+    </template>
+</body>
+<script>
+    //login组件
+    let login={
+        template:"#login"
+    }
+    //定义四个路由
+    let routes=[
+        {
+            path:"/page1",
+            component:{
+                template:"<div>路由一</div>"
+            }
+        },
+        {
+            path:"/page2",
+            // 引入一个属性
+            meta:{
+                isLogin:true
+            },
+            component:{
+                template:"<div>路由二</div>" 
+            }
+        },
+        {
+            path:"/page3",
+            meta:{
+                power:1
+            },
+            component:{
+                template:"<div>路由三</div>" 
+            }
+        },
+        {
+            path:"/login",
+            component:login
+        }
+    ]
+    //new路由
+    let router=new VueRouter({
+        routes
+    })
+    let vm=new Vue({
+        el:"#app",
+        data:{},
+        router
+    })
+    //全局路由钩子函数  写的每一个路由都会进入到这个钩子函数中，进行函数体的运作
+    router.beforeEach((to,from,next)=>{
+        console.log("车队长，开车不?");
+        console.log(to);
+        console.log(from);
+        //拦截路由  判断我们的登陆状态
+        //meta 关键字 不要写自定义的meta数据
+        //判断你的isLogin true的话 ，从新去登陆，如果false 页面不用跳转  
+        // 模仿京东的登陆状态==》登陆显示首页
+        //                    不登陆跳转至登陆页面
+        //路由拦截
+        
+        if(to.meta.isLogin){
+            if(false){
+                next();//接着往下走，如果没有参数，停留在改页面
+            }else{
+                alert("好久没有登陆了，先去登陆吧，车队长");
+                //跳转至登陆页面
+                next("/login")
+            }
+        }
+        else{
+            alert("爱谁谁");
+            //全局路由  走到底
+            next();
+        }
+    })
+</script>
+</html>

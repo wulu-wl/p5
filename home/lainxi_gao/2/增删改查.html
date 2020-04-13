@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/home/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="title"> <button @click="add">增加</button>
+        <hr>
+        <ul>
+            <li v-for="(item,index) in arr" :key="index">
+                <p>{{item}}====={{index}}</p>
+                <button @click="del(index)">删除</button> 
+                <button @click="upd(index)">修改</button>
+            </li>
+        </ul>
+        <dl v-show="active">
+            <dt><input type="text" v-model="updtitle"></dt>
+            <hr>
+            <dd>
+                <button @click="updok">确认修改</button>
+            </dd>
+        </dl>
+    </div>
+</body>
+<script>
+    let vm=new Vue({
+        el:"#app",
+        data:{
+            title:"",
+            arr:[],
+            active:false,
+            updtitle:"",
+            updindex:''
+        },
+        methods:{
+            add(){  
+                this.arr.push(this.title)
+            },
+            del(index){
+                this.arr.splice(index,1)
+            },
+            upd(index){
+                this.active=true
+                // console.log(index)
+                // 点击修改时存当前下下标，将要修改的值赋值给修改框里
+                this.updtitle=this.arr[index]
+                this.updindex=index
+            },
+            updok(){
+                this.active=false
+                // 用一个新的数组等于原来的数组
+                let arr1=this.arr
+                //新数组中对应的需要修改的下标所对应的值等于修改框里面的值
+                arr1[this.updindex]=this.updtitle;
+                //修改完之后重新赋值给原数组
+                this.arr=arr1
+            }
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <router-view></router-view>
+    </div>
+    <template id="index">
+        <div class="index">
+            <router-link to="/search">
+                <input type="text">
+            </router-link>
+            <router-link to="/shandong">山东</router-link>
+            <router-link to="/henan">河南</router-link>
+            <router-view></router-view>
+        </div>
+    </template>
+    <!-- 搜索组件儿 -->
+    <template id="search">
+        <div class="search">
+            <input type="text" v-model="search" />
+            <!-- 展示区 -->
+            <ul>
+                <li v-for="item in getCity">
+                    <p v-for="ele in item.cities">{{ele}}</p>
+                </li>
+            </ul>
+        </div>
+    </template>
+</body>
+<script src="./vue.js"></script>
+<script src="./vue-router.js"></script>
+<script>
+    // 首页
+    let index = {
+        template: "#index"
+    }
+    // 山东
+    // 河南
+    let shandong = {
+        template: `
+            <div>孔子</div>
+        `
+    }
+    let henan = {
+        template: `
+            <div>诗圣</div>
+        `
+    }
+    let search = {
+        template: "#search",
+        data() {
+            return {
+                search: "",
+                arr: [{
+                    province: "山东",
+                    cities: ["济南", "聊城", "青岛"]
+                }, {
+                    province: "河南",
+                    cities: ["郑州", "新乡", "洛阳"]
+                }]
+            }
+        },
+        computed: {
+            getCity() {
+                if (this.search) {
+                    let newArr = this.arr.filter((item) => {
+                        if (item.province == this.search) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    })
+                    return newArr
+                } else {
+                    return [];
+                }
+            }
+        }
+    }
+    // 配置路由文件
+    let routes = [{
+        path: "/",
+        component: index,
+        children: [{
+            path: "/shandong",
+            component: shandong
+        }, {
+            path: "/henan",
+            component: henan
+        }]
+    }, {
+        path: "/search",
+        component: search
+    }]
+    let router = new VueRouter({
+        routes
+    })
+    let vm = new Vue({
+        el: "#app",
+        data: {},
+        router
+    })
+</script>
+</html>
+

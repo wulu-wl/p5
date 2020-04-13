@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- view -->
+    <div id="app">
+        <!-- <button @click="reverse">反转</button>
+        {{msg}} -->
+        {{msg|reverse}}
+    </div>
+    <div id="app2">
+        {{msg|reverse}}
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    // 全局过滤器
+    Vue.filter("reverse",(val)=>{
+        return val.split("").reverse().join("")
+    })
+    let vm=new Vue({
+        el:"#app",//根组件儿挂载
+        data:{
+            msg:new Date()
+        },
+        methods:{
+           
+        }  
+    })
+    let vm2=new Vue({
+        el:"#app2",//根组件儿挂载
+        data:{
+            msg:"hello"
+        }
+    })
+
+    // 2019-12-18  10:10
+</script>
+</html>

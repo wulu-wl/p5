@@ -1,0 +1,53 @@
+2、react-redux 在react中使用redux 的模块
+    下载：npm install react-redux --save
+    使用：
+一、在 index.js中
+    1）载入封装好的 store 模块
+        import store from "./store.js"
+    2) 载入react-redux 
+        import {Provider} from "react-redux"
+    3) 使用Provider组件包裹需要 使用 store 的组件
+        并传入 store 
+        <Provider store={store}>
+            <需要使用store的组件 />
+        </Provider>
+
+二、在组件中获取 store 中的 state 或 调用actions
+     1) 载入react-redux 
+        import {connect} from "react-redux"
+     2) 将容器组件 转为 UI 组件
+        export default connect(
+            mapStateToProps,
+            mapDispatchToProps
+        )(组件名)
+
+     3)获取 store 中的 state
+        在  export default 上方 
+
+        const mapStateToProps = (state) => {
+            console.log(state)
+            return {
+                "自定义属性名": state
+            }
+        }
+        在组件中调用：
+             this.props.自定义属性名
+
+     4)调用store 中的 actions 改变state
+        const mapDispatchToProps = (dispatch) => {
+            return {
+                "自定义属性名": (参数) => {
+                    dispatch({
+                        "type": "调用的type名",
+                        "参数名": 参数值
+                    })
+                }
+            }
+        }
+         在组件中调用 ：
+            onClick={()=>this.props.自定义属性名(参数)}   
+
+
+
+
+

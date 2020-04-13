@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/home/vue.js"></script>
+    <style>
+       
+        .color{
+            color:chartreuse;
+        }
+        .red{
+            background-color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+        <!-- 原生 -->
+        <ul>
+            <li class="red">第一个</li>
+            <li class="color red">第二个</li>
+            <li class="red color">第二个</li>
+            <!-- 三个均为蓝色 -->
+        </ul>
+        <!-- 变量 -->
+        <ol>
+            <li v-bind:class="ys">第一个</li>
+            <li v-bind:class="'color'">第二个</li>
+        </ol>
+        <!-- 对象 true 绑定  false不绑定 -->
+        <ol>
+            <li v-bind:class="{color:true}">aaa</li>
+            <li v-bind:class="{color:false}">aaa</li>
+            <li v-bind:class="{color:1==2}">aaa</li>
+            <li v-bind:class="{color:1==1}">aaa</li>
+            <li v-bind:class="{color:true,red:true}">aaa</li>
+        </ol>
+        <!-- 数组 -->
+        <ol>
+            <li v-bind:class="['color','red']">bbb</li>
+            <li v-bind:class="[{color:true},{red:false}]">bbb</li>
+        </ol>
+        <!-- 对象形式 -->
+        <ul>
+            <li v-bind:style="styleobj">阿萨大大发生的</li>
+            <li v-bind:style="{color:'pink',background:'green'}">阿萨大大发生的</li>
+        </ul>
+    </div>
+</body>
+<script>
+    let vm=new Vue({
+        el:"#app",
+        data:{
+            msg:"calss类名",
+            ys:"color",
+            styleobj:{
+                color:"red",
+                background:"pink"
+            }
+        
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <router-link :to="{path:'/user/aa'}">aa</router-link>
+        <router-link :to="{path:'/user/bb'}">bb</router-link>
+        <router-link :to="{path:'/user/'+obj.obj1.usersname}">cc</router-link>
+        <button @click="fn">点击进入路由</button>
+        <router-view></router-view>
+    </div>
+    <template id="user">
+        <div class="user">
+            {{$route.params.userName}}
+            <!-- {{}} -->
+        </div>
+    </template>
+</body>
+<script src="./vue.js"></script>
+<script src="./vue-router.js"></script>
+<script>
+    // react路由传值    path query  state  
+    // vue             path query params   meta/全局路由导航钩子函数
+    // path
+    // let aa={
+    //     template:`
+    //         <div>aa</div>
+    //     `
+    // }
+    // let bb={
+    //     template:`
+    //         <div>bb</div>
+    //     `
+    // }
+    // let cc={
+    //     template:`
+    //         <div>cc</div>
+    //     `
+    // }
+    let user={
+        template:"#user"
+    }
+    // 配置路由文件
+    let routes=[{
+        // 前面是公共组件儿,后面是传值(变量)
+        path:"/user/:userName",
+        component:user
+    }]
+    let router=new VueRouter({
+        routes
+    })
+    let vm=new Vue({
+        el:"#app",
+        data:{
+            obj:{
+                obj1:{
+                    usersname:"cheng"
+                }
+                
+            }
+        },
+        router,
+        methods:{
+            fn(){
+                console.log(this.$route)
+            }
+        }
+    })
+    // path传值特点:
+    // 1.不可以传对象
+    // 2.动态路由  path:公共组件儿/:传值
+    // 3.传值会暴露在地址栏中   get
+</script>
+</html>

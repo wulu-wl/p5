@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .active{
+        background-color: aqua;
+    }
+    .red{
+        color: brown;
+    }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- 
+            style 第一种 :class
+            <div :class="{active:active}">
+                {{msg}}
+            </div>
+        -->
+        <!-- 
+            style 第二种 :class
+            <div :class="{active:isActive,red:isRed}">{{msg}} </div> 
+        -->
+        <!-- 
+            style 第三种 :style
+            <div v-bind:style="{background:bg,color:color}">{{msg}}</div>
+         -->
+         <div v-bind:style="[bg,color]">{{msg}}</div>
+    </div>
+</body>
+<script src="../1907pr/day01/vue.js"></script>
+<script>
+//第一种
+    // new Vue({
+    //     el:"#app",
+    //     data:{
+    //         msg:"hello v-style-1",
+    //         active:true
+    //     }
+    // })
+
+
+//第二种
+    // new Vue({
+    //     el:"#app",
+    //     data:{
+    //         msg:"hello v-style-2",
+    //         isActive:true,
+    //         isRed:false
+    //     }
+    // })
+//第三种    
+    // new Vue({
+    //     el:"#app",
+    //     data:{
+    //         msg:"hello v-style-3",
+    //         bg:"red",
+    //         color:"#fff"
+    //     }   
+    // })
+//第四种
+    // new Vue({
+    //     el:"#app",
+    //     data:{
+    //         msg:"hello v-style-4",
+    //         bg:{
+    //             background:"cyan",  
+    //         },
+    //         color:{
+    //             color:'#fff',
+    //         }
+    //     }
+    // })
+</script>
+</html>

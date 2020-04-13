@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="showhide()">
+            <span v-show="f==false">显示</span>
+            <span v-show="f==true">隐藏</span>
+        </button>
+        <div v-show="f">
+            我是通过 v-show 控制的
+        </div>
+
+        <!-- 当 f == false  要隐藏 div .. 给 div 绑定 hide样式 -->
+        <div v-bind:class="{hide:f==false}">
+            我是通过 class 控制的
+        </div>
+    </div>
+    <script>
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                f: true
+            },
+            methods: {
+                showhide() {
+                    this.f = !this.f;
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

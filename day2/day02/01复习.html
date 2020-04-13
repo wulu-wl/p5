@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="add">增加航母</button>
+        <input type="text" v-model="shiptext"/>
+        <ul>
+            <li v-for="item of ship.entries()" :id="item[0]">{{item[1].name}}<button @click="retire">退役</button></li>
+        </ul>
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    // 指令  
+    // 自定义指令
+    // v-on事件儿  v-bind属性  v-for 遍历循环  v-html/v-text  v-bind:style  
+    // 阻止浏览器默认事件儿 @click.prevent/@click.stop
+    // 双向数据绑定 v-model 
+    // 增删 
+    new Vue({
+        el:"#app",
+        data:{
+            shiptext:"",
+            ship:[
+                {name:"辽宁舰"},
+                {name:"山东舰"}
+            ]
+        },
+        // 专门存放逻辑业务的地方
+        methods:{
+            //增加航母
+            add(){
+                // this.shiptext
+                this.ship.push({name:this.shiptext})
+                this.shiptext=""
+            },
+            retire(ev){
+                let id=Number(ev.target.parentNode.id)
+                this.ship.splice(id,1)
+            }
+        }
+    })
+    
+</script>
+</html>

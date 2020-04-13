@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+        <p v-for="item in  arr">{{item}}</p>
+        <!-- arr item  代表数组中的每一项 -->
+        <hr/>
+        <p v-for="item in obj">{{item}}</p>
+        <!-- obj item 代表对象中的属性值 -->
+        <hr/>
+        <p v-for="item in arrobj">{{item.name}}</p>
+        <!-- item.name 代表数组中的每一个对象的属性值 -->
+    </div>
+</body>
+<script src="../1907pr/day01/vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            msg:"v-for循环 遍历",
+            arr:["aa","bb","cc"],
+            obj:{
+                name:"11",
+                age:"22",
+                hobby:"333"
+            },
+            arrobj:[
+                {name:"a1"},
+                {name:"a2"},
+                {name:"a3"}
+            ]
+        }
+    })
+</script>
+</html>

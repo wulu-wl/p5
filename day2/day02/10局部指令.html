@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .isWidth{
+            width: 200px;
+        }
+        .isHeight{
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-myfocus/>
+        <!-- <div class="box" :class="{isWidth:isWidth,isHeight:isHeight}" v-abc></div> -->
+    </div>
+    <div id="app2">
+        <input type="text" v-myfocus/>
+        <!-- <div class="box" :class="{isWidth:isWidth,isHeight:isHeight}" v-abc></div> -->
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    let vm1=new Vue({
+        el:"#app",//挂载根元素 app
+        data:{
+            msg:"hello world",
+            isWidth:true,
+            isHeight:true
+        },
+        methods:{},
+        filters:{},
+        // 局部自定义指令
+        directives:{
+            "myfocus":{
+                "inserted":(el)=>{
+                    console.log(el)
+                    el.focus()
+                    el.style.background="cyan"
+                }
+            },
+            // "abc":{
+            //     "str":(el)=>{
+            //         console.log(el)
+            //         el.style.background="cyan"
+            //     }
+            // }
+        }
+    })
+    let vm2=new Vue({
+        el:"#app2",
+        methods:{},
+        filters:{}
+    })
+    // vue-cli
+    // webpack 
+    // wepack-dev-server
+    // vue-cli@2.1.2
+</script>
+</html>

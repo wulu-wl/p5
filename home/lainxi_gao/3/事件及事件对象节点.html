@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/home/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>哈哈哈</p>
+        <button @click="add('heheh',$event)">点击</button>
+        <span>lalla</span>
+    </div>
+</body>
+<script>
+    let vm=new Vue({
+        el:"#app",
+        data:{
+            msg:"事件及点击事件节点对象"
+        },
+        methods:{
+            add(a,e){
+                console.log(a)
+                console.log(e.target)
+                console.log(e.target.previousElementSibling)
+                console.log(e.target.nextElementSibling)
+                e.target.previousElementSibling.innerHTML="hhhhh"
+                e.target.nextElementSibling.innerHTML="啦啦啦"
+            }
+        }
+    })
+</script>
+</html>

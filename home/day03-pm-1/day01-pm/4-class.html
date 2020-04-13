@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .bg {
+            background: red;
+        }
+
+        .color {
+            color: blue;
+        }
+    </style>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 原生 -->
+        <p class="color">第一个</p>
+        <p class="bg color">第二个</p>
+        <!-- 变量 -->
+        <p v-bind:class="ys">第十个</p>
+        <p v-bind:class="'color'">第三个</p>
+        <!-- 对象  true 绑定样式 false 不绑定样式-->
+        <p v-bind:class="{color:true}">第四个</p>
+        <p v-bind:class="{color:false}">第五个</p>
+        <p v-bind:class="{color:1==2}">第六个</p>
+        <p v-bind:class="{color:true,bg:true}">第七个</p>
+        <!-- 数组 -->
+        <p v-bind:class="['bg','color']">第八个</p>
+        <p v-bind:class="[{bg:true},{color:true}]">第九个</p>
+    </div>
+    <script>
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                ys: "color"
+            }
+        })
+    </script>
+</body>
+
+</html>

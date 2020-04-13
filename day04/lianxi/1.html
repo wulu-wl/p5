@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <router-link :to="{path:'/index/aa'}">aa</router-link>
+        <router-link :to="{path:'/index/bb'}">bb</router-link>
+        <router-link :to="{path:'/index/cc'}">cc</router-link>
+        <router-view></router-view>
+        <button @click="fn">点</button>
+    </div>
+    <template id="index">
+        <div class="index">
+            {{$route.params.in}}
+        </div>
+    </template>
+</body>
+<script src="../kong/vue.js"></script>
+<script src="../kong/vue-router.js"></script>
+<script>
+    let index={
+        template:"#index"
+    }
+    let routes=[{
+        path:"/index/:in",
+        component:index
+    }]
+    let router=new VueRouter({routes})
+
+    new Vue({
+        el:"#app",
+        data:{},
+        router,
+        methods:{
+            fn(){
+                console.log(this.$route)
+            }
+        }
+    })
+</script>
+</html>

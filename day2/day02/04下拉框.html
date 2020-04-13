@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <select name="" id="" v-model="selected">
+            <option value="-1">请输入你想居住的城市</option>
+            <option value="0">北京市</option>
+            <option value="1">南京市</option>
+            <option value="2">上海市</option>
+        </select>
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    // new关键字 创建vue实例 单页面
+    new Vue({
+        el:"#app",//根组件儿挂载
+        data:{
+            selected:2
+        }
+    })
+    //全选反选和全部选
+    // checked  true/false
+    
+</script>
+</html>

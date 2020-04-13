@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <mycom></mycom>
+        <mycom1></mycom1>
+        <mycom2></mycom2>
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    var mycom={
+        template:`
+            <div>我是局部组件儿</div>
+        `
+    }
+    var mycom1={
+        template:`
+            <div>我是局部组件儿1</div>
+        `
+    }
+    var mycom2={
+        template:`
+            <div>我是局部组件儿2</div>
+        `
+    }
+    let vm=new Vue({
+        el:"#app",
+        data:{
+            
+        },
+        components:{
+            mycom,
+            mycom1,
+            mycom2
+        }
+    })
+</script>
+</html>

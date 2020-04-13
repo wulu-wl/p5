@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            width: 600px;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+
+        .add {
+            border: 1px solid #000;
+            height: 35px;
+            line-height: 35px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="add">
+            品牌名称：<input type="text" v-model="bannerName"><button @click="add()">添加</button>
+        </div>
+        <div class="add">
+            品牌名称：<input type="text" v-model="search">
+        </div>
+        <!-- 展示区 -->
+        
+    </div>    
+</body>
+<script src="./vue.js"></script>
+<script>
+    let vm=new Vue({
+        el:"#app",
+        data:{
+            carList:[{
+                name:"宝马"
+            },{
+                name:"野马"
+            },{
+                name:"奔驰"
+            }]
+        },
+        methods:{
+
+        }
+    })
+</script>
+</html>

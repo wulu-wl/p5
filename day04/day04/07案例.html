@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .red{
+            background: cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <router-view></router-view>
+    </div>
+    <template id="index">
+        <div class="index">
+            <router-link :to="{path:'/index'}" v-for="(item,index) in arr" class="red">
+                <p>
+                    {{item.foods}}
+                </p>
+            </router-link>
+            <button @click="fn">点击</button>
+            <router-view></router-view>
+        </div>
+    </template>
+    <template id="details">
+        <div class="details">
+            {{$route.params.index}}
+        </div>
+    </template>
+</body>
+<script src="./vue.js"></script>
+<script src="./vue-router.js"></script>
+<script src="./axios.js"></script>
+<script>
+    let index = {
+        template: "#index",
+        data() {
+            return {
+                arr: []
+            }
+        },
+        methods:{
+            fn(){
+                console.log(this.$route)
+            }
+        },
+        mounted() {
+            console.log(this.$route)
+            axios({
+                method: "get",
+                url: "http://localhost:8080/show"
+            }).then(res => {
+                this.arr = res.data
+            })
+        }
+    }
+    let details = {
+        template: "#details",
+        data() {
+            return {
+                id:""
+            }
+        },
+
+    }
+
+    let routes = [{
+        path: "/",
+        component: index
+    }, {
+        path: "/details/:id"
+    }, {
+        path: "*",
+        redirect: "/"
+    }]
+    let router = new VueRouter({
+        routes
+    })
+    let vm = new Vue({
+        el: "#app",
+        data: {},
+        methods: {},
+        router
+    })
+</script>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/home/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <input type="text" v-hello>
+    </div>
+</body>
+<script>
+    //全局指令
+    // Vue.directive("hello",{
+    //     inserted:function(el){
+    //         el.focus()
+    //     }
+    // })
+    let vm = new Vue({
+        el: "#app",
+        data: {
+            msg: "全局指令",
+            num: 1
+        },
+        //局部指令
+        directives: {
+            "hello": {
+                inserted: function (el, a, b) {
+                    // el: 指令所绑定的元素，可以用来直接操作DOM
+                    // a: 一个对象，包含指令的很多信息 指令名称等等
+                    // b: VUE编译生成的虚拟节点VNode
+                    console.log(el, a, b)
+                    el.focus()
+                }
+            }
+        }
+    })
+</script>
+
+</html>

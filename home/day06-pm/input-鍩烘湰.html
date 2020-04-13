@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/react.js"></script>
+    <script src="./js/react-dom.js"></script>
+    <script src="./js/babel.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <div>
+            <input type="text" name="user">
+            <input type="text" name="age">
+            <button>添加</button>
+        </div> -->
+    </div>
+    <script type="text/babel">
+        class Zhuce extends React.Component{
+            constructor(){
+                super();
+                this.state={
+                    user:"1",
+                    age:"2"
+                }
+            }
+            einput=(event)=>{
+                // console.log(event.target.name)
+                // console.log(event.target.value)
+                this.setState({
+                    [event.target.name]:event.target.value
+                })
+            }
+            add=()=>{
+                console.log(this.state.user,this.state.age)
+            }
+            render(){
+                let {user,age} =this.state
+               return(
+                    <div>
+                        <input type="text" name="user" value={user} onChange={this.einput} />
+                        <input type="text" name="age" value={age} onChange={this.einput} />
+                        <button onClick={this.add}>添加</button>
+                    </div>
+               ) 
+            }
+        }
+        ReactDOM.render(
+            <Zhuce></Zhuce>,
+            document.getElementById("app")
+        )
+    </script>
+</body>
+
+</html>

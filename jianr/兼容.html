@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			list-style:none;
+		}
+		/*1.opacity透明度兼容*/
+		.one{
+			width: 100px;
+			height: 100px;
+			background: #f00;	
+			margin: 10px;
+			opacity:0.2;  
+			/*opacity 正常范围是在0-1之间*/
+			filter:alpha(opacity=20);
+			/*ie中alpha值是在1-100*/
+			/*opacity 在火狐和谷歌中是可以正常显示  在ie8及以下中就需要filter:alpha(opacity=20); 来进行设置*/
+		}
+		/*2.图片跳转页面时ie 会出现蓝色边框 加上border:none 或者border : 0*/
+		.two img{
+			/*border: none;*/
+			border: 0;
+			/*图片也可以加透明度*/
+			/*opacity: 0.3;*/
+		}
+		/*3.ie8及ie8以下placeholder不显示的问题*/
+		
+		/*4.lang="en"  lang="zh"*/
+		/*<html lang="en">
+		向搜索引擎表示该页面是html语言，并且语言为英文网站，其"lang"的意思就是“language”，语言的意思，而“en”即表示english
+		你的页面如果是中文页面，可将其改为
+		<html lang="zh">
+		zh即表示中文
+		如果写的不是英文网站 把它去掉就行*/
+	</style>
+</head>
+<body>
+		<div class="one"></div>
+		<a href="http://www.baidu.com" class="two"><img src="image/1.jpg"/></a>
+		<!--placeholder 在ie10以下都是不显示的-->
+		<input type="text" placeholder="请输入" />
+		
+		<span class="four"></span>
+</body>
+<script type="text/javascript"> 
+	//ie8 及以下 的placeholder 如何显示
+    placeholder();  
+    function placeholder() {    
+    var doc=document,    
+        inputs=doc.getElementsByTagName('input'),    
+        //浏览器input域是否支持placeholder    
+        supportPlaceholder='placeholder'in doc.createElement('input'),    
+        placeholder=function(input){    
+            var text=input.getAttribute('placeholder'),    
+            defaultValue=input.defaultValue;    
+            if(defaultValue==''){    
+                input.value=text    
+            }    
+            input.onfocus=function(){    
+                if(input.value===text){    
+                    this.value=''    
+                }    
+            };    
+            input.onblur=function(){    
+                if(input.value===''){    
+                    this.value=text    
+                }    
+            }    
+        };    
+        if(!supportPlaceholder){    
+            for(var i=0,len=inputs.length;i<len;i++){    
+                var input=inputs[i],    
+                text=input.getAttribute('placeholder');    
+                if(input.type==='text'&&text){    
+                    placeholder(input)    
+                }    
+            }    
+        }    
+}     
+</script> 
+</html>

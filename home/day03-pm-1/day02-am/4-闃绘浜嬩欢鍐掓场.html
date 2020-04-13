@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+    <style>
+        .li {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app">
+        <ul>
+            <li v-on:click="info()" class="li">
+                商品1-点击跳到商品详情
+                <!-- <button v-on:click="add()">+</button> -->
+                <!-- 阻止事件冒泡  事件修饰符 .stop -->
+                <button v-on:click.stop="add()">+</button>
+                <span>1</span>
+                <button v-on:click="j($event)">-</button>
+            </li>
+        </ul>
+    </div>
+    <script>
+        const vm = new Vue({
+            el: "#app",
+            methods: {
+                info() {
+                    alert("跳到详情了")
+                },
+                add() {
+                    alert("数量加")
+                },
+                j(event) {
+                    //阻止事件冒泡
+                    event.stopPropagation();
+                    alert("数量减")
+                }
+            },
+
+        })
+    </script>
+</body>
+
+</html>

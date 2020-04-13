@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <mycom></mycom>
+        <mycom1></mycom1>
+    </div>
+    <!-- 全局组件儿分离 需要放置在body中  script类型变为模板 template -->
+    <script type="text/template" id="show">
+        <div class="show">
+            <p>山东舰</p>
+        </div>
+    </script>
+    <script type="text/template" id="show1">
+        <div class="show1">
+            <p>辽宁舰</p>
+            <div>哈哈哈按时</div>
+        </div>
+    </script>
+</body>
+
+<script>
+    // 全局组件儿分离,不需要在vue根组件儿中component中进行挂载
+    Vue.component("mycom",{
+        template:"#show"
+    })
+    Vue.component("mycom1",{
+        template:`
+            <><>
+        `
+    })
+    //挂载
+    new Vue({
+        el:"#app",
+        data:{}
+    })
+    
+</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p {
+            color: red;
+        }
+    </style>
+    <script src="./vue.js"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" placeholder="姓名" v-model="user"> <br>
+        <p>姓名是:{{user}}</p>
+        <input type="radio" value="男" v-model="sex">男
+        <input type="radio" value="女" v-model="sex">女 <br>
+        <p>性别是：{{sex}}</p>
+
+        <input type="checkbox" v-model="hobby" value="1"> 唱歌
+        <input type="checkbox" v-model="hobby" value="2"> 跳舞
+        <input type="checkbox" v-model="hobby" value="3"> 打篮球 <br>
+        <p>爱好是：{{hobby}}</p>
+
+        <select name="" id="" v-model="address">
+            <option disabled value="">选择省份</option>
+            <option value="sx">陕西</option>
+            <option value="shanxi">山西</option>
+            <option value="hn">河南</option>
+            <option value="hb">河北</option>
+        </select>
+
+        <p>省份是：{{address}}</p>
+        <br>
+
+        <textarea cols="30" rows="10" placeholder="自我评价" v-model="fair">
+
+        </textarea>
+        <p v-html="fair">自我评价是:{{fair}}</p>
+        <button v-on:click="add()">获取</button>
+
+    </div>
+
+    <script src="./8.js"></script>
+</body>
+
+</html>

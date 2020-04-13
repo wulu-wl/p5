@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- <input type="text" v-model="one">
+        <input type="text" v-model="two">
+        <hr>
+        <p>{{act}}</p> -->
+
+        <input type="text" v-model="one">
+        <input type="text" v-model="two">
+        <input type="text" v-model="full">
+            {{full}}
+    </div>
+</body>
+<script src="vue.js"></script>
+<script>
+    // let vm=new Vue({
+    //     el:"#app",
+    //     data:{
+    //         one:null,
+    //         two:null
+    //     },
+    //     computed:{
+    //         act:function(){
+               
+    //             console.log('computed getter...')
+    //             return Number(this.one)+Number(this.two)
+    //         }   
+    //     },
+            //就算数据绑定改变了   也没有打印computed getter  之打印了updated
+    //     updated(){
+    //         console.log('updated')
+    //     }
+    // })
+
+    // let vm=new Vue({
+    //     el:"#app",
+    //     data:{
+    //         one:'',
+    //         two:''
+    //     },
+    //     computed:{
+    //         full:{
+    //             get(){
+    //                 console.log('getter')
+    //                 return this.one+this.two
+    //             },
+    //             set(newvalue) {
+    //                 console.log('setter')
+    //                 var names=newvalue.split('')
+    //                 this.firstName = names[0]
+    //                 this.lastName = names[names.length - 1]
+    //                 return this.firstName + ' ' + this.lastName
+
+    //             }
+    //         }
+    //     },
+    //     updated(){
+    //         console.log('updated')
+    //     }
+
+    // })
+
+
+    // setTimeout(function () { console.log('settimeot') },1000)
+    // setInterval(function () { console.log('setINterval') },1000)
+
+//     console.log(typeof(function(){console.log(1) }))//function
+//    console.log(typeof([]))//object
+//     console.log(typeof({}))//object
+//     console.log(typeof(''))//string
+//     console.log(typeof(1))//number
+//     console.log(typeof(null))//object
+//     console.log(typeof(undefined))//undefined
+//     console.log(typeof(true))//boolean
+//     console.log(typeof(Symbol))//function 
+// var [a,b]=[1,2,3]
+// console.log(a,b) //1   2
+// var [a,b]=[1,2,3]
+// console.log(a,b)//1   2
+// var [a,,b]=[1,2,3]
+// console.log(a,b)//1  3
+// var [a,...b]=[1,2,3]
+// console.log(a,b) // 1  [2,3]
+
+// var a=9;
+// var b=14;
+// console.log(a&b)
+
+</script>
+</html>

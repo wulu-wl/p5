@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script src="./jquery-3.4.1.min.js"></script>
+<script>
+    // const p=new Promise((res,rej)=>{
+    //     setTimeout(()=>{
+    //         console.log('once')
+    //         res("success")
+    //     })
+    // })
+    // const start=Date.now()
+    // p.then((res)=>{
+    //     console.log(res,Date.now()-start)
+    // })
+    // p.then((res)=>{
+    //     console.log(res,Date.now()-start)
+    // })
+    //once  打印一次   success打印两次
+
+
+
+    //解构赋值es6
+    function f([x=2,y=x]){
+        return [x,y]
+        // console.log(x+y)
+    }
+    f([x,y])
+</script>
+</html>

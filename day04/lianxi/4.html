@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="first">
+        <input type="text" v-model="last">
+        {{full}}
+        <br>
+        aaa<input type="text" v-model="obj.obj1.name"/>
+    </div>
+</body>
+<script src="../kong/vue.js"></script>
+<script src="../kong/vue-router.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            first: '',
+            last: '',
+            full: '',
+            obj: {
+                obj1: {
+                    name: 'wwww'
+                }
+            }
+        },
+        watch: {
+            first() {
+                this.full = this.first + this.last
+            },
+            last() {
+                this.full = this.first + this.last
+            },
+            obj: {
+                handler(v1, v2) {
+                    console.log(v1)
+                    console.log(v2)
+                },
+                deep: true
+            }
+        }
+    })
+</script>
+
+</html>

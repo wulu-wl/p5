@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./echarts.min.js"></script>
+    <style>
+        #main {
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main"></div>
+</body>
+<script type="text/javascript">
+    //饼图
+    // echarts.init(document.querySelector("#main")).setOption({
+    //     series: {
+    //             type: 'pie',
+    //             data: [
+    //                 {name: 'A', value: 1212},
+    //                 {name: 'B', value: 2323},
+    //                 {name: 'C', value: 1919}
+    //             ]
+    //         } 
+    // })
+    //柱状图
+    // let myecharts = echarts.init(document.querySelector("#main"))
+    // let Option = {
+
+    //         title: {
+    //             text: '第一个 ECharts 实例'
+    //         },
+    //         tooltip: {},
+    //         legend: {
+    //             data: ['销量']
+    //         },
+    //         xAxis: {
+    //             data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+    //         },
+    //         yAxis: {},
+    //         series: [{
+    //             name: '销量',
+    //             type: 'bar',
+    //             data: [5, 20, 36, 10, 10, 20]
+    //         }]
+
+    // }
+    // myecharts.setOption(Option) 
+    // //柱状图点击事件
+    // myecharts.on("click",function (param) { 
+    //     console.log(param.value)
+    //     console.log(param.name)
+    //  })
+
+    // //折线图
+    // let myecharts = echarts.init(document.querySelector("#main"))
+
+    // option = {
+    //     xAxis: {
+    //         type: 'category',
+    //         data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    //     },
+    //     yAxis: {
+    //         type: 'value'
+    //     },
+    //     series: [{
+    //         data: [820, 932, 901, 934, 1290, 1330, 1320],
+    //         type: 'line'
+    //     }]
+    // };
+    // myecharts.setOption(option)
+    //折线图
+    // let myecharts=echarts.init(document.querySelector("#main"))
+    // var option={
+    //     xAxis:{
+    //         type:"category",
+    //         data:["one","two","three","four"]
+    //     },
+    //     yAxis:{type:"value"},
+    //     series:[{
+    //         data:[200,300,420,100],
+    //         type:"line"
+    //     }]
+    // }
+    // myecharts.setOption(option)
+</script>
+
+</html>

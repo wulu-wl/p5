@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <com3></com3>
+        <com1></com1>
+        <com2></com2>
+    </div>
+    <script type="text/template" id="com1">
+        <p>com1组件</p>
+    </script>
+    <script type="text/template" id="com2">
+        <p>com2组件</p>
+    </script>
+    <script type="text/template" id="com3">
+        <p>com3组件</p>
+    </script>
+</body>
+<script src="./vue.js"></script>
+<script>
+    Vue.component('com1',{
+        template:'#com1'
+    })
+    Vue.component('com2',{
+        template:'#com2'
+    })
+    Vue.component('com3',{
+        template:'#com3'
+    })
+    new Vue({
+        el:"#app",
+
+    })
+</script>
+</html>

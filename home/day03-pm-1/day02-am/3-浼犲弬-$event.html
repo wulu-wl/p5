@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>$evnet</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <p>呵呵呵</p>
+        <!-- $event 触发该事件的事件对象 -->
+        <p v-on:click="dian('哈哈哈',$event)">点击我</p>
+    </div>
+    <script>
+        const vm = new Vue({
+            el: "#app",
+            methods: {
+                dian(can, event) {
+                    // console.log(can, event)
+                    // 获取当前节点 的上一个兄弟节点
+                    console.log(event.target.previousElementSibling);
+                    //改变 上一个兄弟节点  的 innerHTML
+                    event.target.previousElementSibling.innerHTML = can
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

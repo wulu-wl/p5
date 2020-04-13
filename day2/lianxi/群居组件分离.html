@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div id="app">
+        <com></com>
+        <com1></com1>
+    </div>
+    <script type="text/template" id="show">
+        <div>
+            <p>id为show的全局组件分离</p>
+            <h1>id为show的全局组件分离</h1>
+            <hr>    
+        </div>
+    </script>
+   
+    <script type="text/template" id="show1">
+        <div>
+            <p>id为show1的全局组件分离</p>
+            <h1>id为show1的全局组件分离</h1>
+        </div>
+    </script> -->
+    <div id="app">
+        <com></com>
+    </div>
+    <template id="box">
+        <div>
+            <p>局部组件分离</p>
+        </div>
+    </template>
+</body>
+<script src="./vue.js"></script>
+<script>
+    // Vue.component('com',{
+    //     template:'#show'
+    // })
+    // Vue.component('com1',{
+    //     template:'#show1'
+    // })
+    // new Vue({
+    //     el:"#app"
+    // })
+
+        let com={
+            template:'#box'
+        }
+    new Vue({
+        el:'#app',
+        data:{},
+        components:{
+            com
+        }
+    })
+</script>
+</html>

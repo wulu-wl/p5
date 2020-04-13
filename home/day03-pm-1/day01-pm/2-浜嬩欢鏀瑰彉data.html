@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{a}}</h1>
+        <button v-on:click="jia(2)">++</button>
+    </div>
+    <script>
+        // 将 h1 中的值定义到 data 中 
+        // 点击按钮  改变 data 中的 值
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                a: 2
+            },
+            methods: {
+                jia(n) {
+                    //改变 data 里 a属性的值 
+                    // ++
+                    // alert(this.a)
+                    this.a = this.a + n
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

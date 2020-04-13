@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let arr1=[{"id":"17","caption":"颜色","types":["黑","棕"]},
+    {"id":"23","caption":"材质","types":["牛皮"]},
+    {"id":"24","caption":"尺码","types":["40","41","42"]}]
+
+    function arrFor(arr){
+        arr.map((item,index)=>{
+            // console.log(item)
+            if(Array.isArray(item.types)){
+                item.types.map((item1,index)=>{
+                    console.log(item1)
+                })
+            }
+        })
+    }
+    arrFor(arr1)
+</script>
+</html>

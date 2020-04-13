@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <a href="http://www.baidu.com" @click.prevent="go(1,$event)">百度一下</a>
+        <input @keyup="doThis" value="娃哈哈"></input>
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",//根组件儿挂载
+        data:{
+            width:200,
+            height:200,
+            bg:"cyan"
+        },
+        methods:{
+            go(id,ev){
+                console.log(id,ev)
+            },
+            doThis(ev){
+                console.log(ev)
+            }
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,33 @@
+纯函数
+https://www.cnblogs.com/guanine/p/9416290.html
+redux 教程
+http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html
+1、redux
+    下载： npm install redux --save
+    使用：
+        1)载入 redux 
+            import { createStore } from "redux";
+        2）创建 reducer
+            function 自定义函数(初始state,方法对象actions){
+                switch(actions.type){
+                    case "type值" :
+                        改变state的语句
+                        获取参数 actions. 参数名
+                        return  修改后的值
+                    default:
+                        return
+                }
+            }
+        3） 创建store 
+            const store=createStore(自定义函数名)
+     获取 state   ： 
+            store.getState()
+     调用 actions ： 
+            store.dispatch({"type":"type值","参数名":"参数值"})
+     手动订阅，自动更新state   store.subscribe(函数名)
+
+
+
+
+
+

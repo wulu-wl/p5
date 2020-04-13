@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{msg}}
+        <!-- <button v-on:click="go">点击</button> -->
+            <!-- 缩写 -->
+        <button @click="go">点击</button>
+    </div>
+</body>
+<script src="../1907pr/day01/vue.js"></script>
+<script>
+//   new Vue({
+//         el:"#app",
+//         data:{
+//             msg:"点击事件",
+//             go(){
+//                 console.log(111)
+                //this指向有问题
+                //方法一般写在methods中
+//             }
+//         }
+//     })
+
+    // new Vue({
+    //     el:"#app",
+    //     data:{
+    //         msg:"点击事件"
+    //     },
+    //     methods:{
+    //         go(){
+    //             console.log(this.msg)
+    //             //点击事件
+    //         }
+    //     }
+    // })
+
+    //缩写
+    // new Vue({
+    //     el:"#app",
+    //     data:{
+    //         msg:"点击事件缩写",
+    //         go(){
+    //             console.log(11111)
+    //         }
+    //     }
+
+    // })
+
+    
+</script>
+</html>

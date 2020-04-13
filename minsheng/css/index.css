@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background: #E6E6E6;
+}
+
+.center {
+    width: 79%;
+    height: auto;
+    /* height: 1000px; */
+    background: #fff;
+    margin: 0 auto;
+}
+
+.header {
+    widows: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.h_left,
+.h_right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.h_left {
+    width: 33%;
+    font-size: 12px;
+    color: #878787;
+    /* border: 1px solid #f00; */
+    justify-content: flex-start;
+}
+
+.h_right {
+    width: 50%;
+    font-size: 12px;
+}
+
+.h_right li:nth-child(6) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid #f00; */
+    font-size: 12px;
+    color: #5e5959;
+    margin-right: 10px;
+}
+
+.h_right li:nth-child(7) {
+    width: 170px;
+    height: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #c8c8c8;
+}
+
+.h_right li:nth-child(7) input {
+    border: none;
+    width: 80%;
+    height: 100%;
+    padding-left: 8px;
+    /* outline: none; */
+}
+
+::-webkit-input-placeholder {
+    color: #ccc;
+}
+
+.h_right li:nth-child(1),
+.h_right li:nth-child(3),
+.h_right li:nth-child(5) {
+    width: 30px;
+    /* border: 1px solid #ccc; */
+    text-align: center;
+    color: #878787;
+
+}
+
+.h_right li:nth-child(3),
+.h_right li:nth-child(5) {
+    font-size: 12px;
+}
+
+.h_right li:last-child img {
+    width: 150px;
+    height: 45px;
+    /* border: 1px solid #f00; */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.h_right li:last-child {
+    /* margin-top: 5px;  */
+    margin-right: 10px;
+}
+
+.h_right li:nth-child(2) {
+    margin-left: -20px;
+}
+
+.h_right li:nth-child(3) {
+    margin-left: -20px;
+}
+
+.h_right li:nth-child(4) {
+    margin-left: -20px;
+}
+
+.h_right li:nth-child(5) {
+    margin-left: -20px;
+}
+
+/* 导航 */
+.nav {
+    width: 100%;
+
+    background: #f2f2f2;
+    box-shadow: 0px 3px 0px 0px rgba(000, 000, 000, 0.3);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.nav li {
+    width: 10%;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.nav li:hover {
+    background: #395F84;
+    color: #fff;
+
+}
+
+/* 轮播图 */
+.wrap {
+    width: 100%;
+    /* margin: 50px auto; */
+    /* height: 500px; */
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    /* border: 1px solid orchid; */
+}
+
+.box {
+    width: 100%;
+}
+
+.box img {
+    width: 100%;
+    /* height: 500px; */
+    height: auto;
+    border: none;
+}
+
+.box div {
+    float: left;
+}
+
+.wrap_nav {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.impInfo {
+    background: rgba(000, 000, 000, 0.3);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 100;
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-size: 12px;
+    padding: 5px 0px 5px 30px;
+}
+
+.impInfo span {
+    padding-left: 30px;
+}
+
+.smallImg {
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    display: flex;
+
+}
+
+.smallImg img {
+    width: 70px;
+    height: 50px;
+    margin: 0px 10px;
+    border: 1px solid #fff;
+}
+
+.smallImg img:hover {
+    transform: translateY(-10px);
+}
+
+/* 中间部分 */
+.content {
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.content_main {
+    width: 100%;
+    margin: 0 auto
+}
+
+.bgone {
+    width: 25%;
+    height: 180px;
+    float: left;
+    padding: 0 2.5%;
+    color: #444;
+}
+
+.bgone {
+    background: url('./../img/ms_indexbg.jpg') no-repeat right center;
+}
+
+.nomar {
+    margin: 0;
+    background: none;
+}
+
+.bgone:last-child {
+    margin-right: 0;
+}
+
+.bgone h3 {
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.bgone h3 a {
+    color: #2474BB;
+    font-weight: normal;
+}
+
+.bgone em {
+    font-weight: bold;
+}
+
+.atCt {
+    padding-top: 5px;
+    height: 80px;
+    line-height: 1.8em;
+}
+
+.atCt a {
+    color: #444;
+}
+
+.footer {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.footer a {
+    color: #4c4c4c;
+}
+
+.footer a em {
+    color: #00A597;
+    padding-left: 2px;
+}
+
+.atCt li {
+    float: left;
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    background: url('./../img/pointblack.jpg') no-repeat left 11px;
+    overflow: hidden;
+}
+
+.atCt li a {
+    color: #444;
+    padding-left: 8px;
+}
+
+.atCt ul.onlineList {
+    width: 96px;
+}
+
+.atCt ul.onlineList56 {
+    width: 56px;
+}
+
+.serverList li {
+    width: 50%;
+}
+
+.left,
+.fl,
+.float_left,
+.lfloat,
+.ms_ileft {
+    display: inline;
+}
+
+.fr,
+.mobile_right1_text,
+.float_right,
+.rfloat {
+    display: inline;
+}
+
+.news_index li {
+    width: 95px;
+}
+
+.news_index li.margin_left_25 {
+    margin-left: 25px;
+    width: 57px;
+}
+
+/*底部样式*/
+.footer1 {
+    height: 190px;
+    width: 100%;
+    background: #545454;
+    overflow: hidden
+}
+
+.foot_ul,
+.foot_ulnone {
+    width: 16.65%;
+    float: left;
+    padding: 0px;
+    margin: 18px 0px;
+}
+
+.foot_ul {
+    background: url('./../img/foot_line.gif') no-repeat top right;
+}
+
+.foot_ul li,
+.foot_ulnone li {
+    color: #FFF;
+    font-size: 12px;
+    line-height: 24px;
+    margin-left: 33%;
+}
+
+.fontbold {
+    font-size: 16px;
+}
+
+/* 最底部copy */
+.copy{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    font-size:12px ;
+}
+.copy_left{
+    /* padding-left: 20px;  */
+    padding: 10px 0px 10px 40px;
+}
+.copy_mid{
+    padding-left: 290px;
+}
+.copy_mid ul{
+    display: flex;
+    /* width: 400px; */
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 20px;
+    /* padding-left: 200px; */
+}
+.copy_mid ul li{
+    padding: 0px 15px;
+}
+.copy_right ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+.copy_right a{
+    padding: 0px 5px;
+}

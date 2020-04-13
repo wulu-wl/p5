@@ -1,0 +1,41 @@
+路由传参
+1、params 动态参数
+优点：参数在地址栏显示 ，刷新，分享 都可以
+缺点：传输数据量小
+
+    <Link to="/详情/1(商品唯一标识id(1))">1商品</Link>
+    <Link to="/详情/1(商品唯一标识id(1))">2商品</Link>
+    <Link to="/详情/1(商品唯一标识id(1))">3商品</Link>
+
+    <Route path="/详情/:变量名" component={详情组件}></Route>
+
+    详情组件中获取 变量名 / 获取 路由参数
+    this.props.match.params.变量名
+
+2、query 
+    优点：传输数据量大
+    缺点：参数不在在地址栏显示 ，刷新，分享 都不可以
+   <Link to={ {pathname="/详情",query:{ 属性名：1 } } }>1商品</Link>
+   <Link to={ {pathname="/详情",query:{ 属性名：2 } } }>2商品</Link>
+   <Link to={ {pathname="/详情",query:{ 属性名：3 } } }>3商品</Link>
+
+   <Route path="/详情" component={详情组件}></Route>
+
+    
+    详情组件中获取 属性名/ 获取 路由参数
+    this.props.location.query.属性名
+
+3、state
+    优点：传输数据量大，刷新可以
+    缺点：参数不在在地址栏显示 ，，分享 都不可以
+    <Link to={ {pathname="/详情",state:{ 属性名：1 } } }>1商品</Link>
+    <Link to={ {pathname="/详情",state:{ 属性名：2 } } }>2商品</Link>
+    <Link to={ {pathname="/详情",state:{ 属性名：3 } } }>3商品</Link>
+
+     <Route path="/详情" component={详情组件}></Route>
+
+    
+    详情组件中获取 属性名/ 获取 路由参数
+    this.props.location.state.属性名
+
+

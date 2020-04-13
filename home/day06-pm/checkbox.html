@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/react.js"></script>
+    <script src="./js/react-dom.js"></script>
+    <script src="./js/babel.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <input type="checkbox"> -->
+    </div>
+    <script type="text/babel">
+        class My extends React.Component{
+            constructor(){
+                super();
+                this.state={
+                    ah:[]
+                }
+             
+            }
+            ec=(event)=>{
+                
+                // console.log(event.target.checked)
+                if(event.target.checked){
+                    let arr=[...this.state.ah];
+                    arr.push(event.target.value)
+                    this.setState({
+                        ah:arr
+                    })
+                }else{
+                    let arr=[...this.state.ah];
+                    let index=arr.findIndex(val=>val==event.target.value )
+                    if(index!=-1){
+                        arr.splice(index,1)
+                        this.setState({
+                             ah:arr
+                         })
+                    }                
+                }
+            }
+            render(){
+                return(
+                     <div>
+                         唱歌<input type="checkbox" value="唱歌" onChange={this.ec}/>
+                         跳舞 <input type="checkbox" value="跳舞" onChange={this.ec}/>
+                          打篮球<input type="checkbox" value="打篮球" onChange={this.ec}/>
+                         rap <input type="checkbox" value="rap" onChange={this.ec}/>
+                         <h1>你选择了：{this.state.ah.join("---")}</h1>
+                     </div>
+                )
+            }
+        }
+
+         ReactDOM.render(
+            <My></My>,
+            document.getElementById("app")
+        )
+    </script>
+</body>
+
+</html>

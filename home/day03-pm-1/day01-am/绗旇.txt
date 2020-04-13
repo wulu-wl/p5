@@ -1,0 +1,61 @@
+1、vue js 是什么
+渐进式 主张最少 
+ https://blog.csdn.net/wangzunkuan/article/details/80729683 
+https://www.cnblogs.com/gopark/p/10771708.html
+JavaScript 框架
+
+作者：尤雨溪
+
+2、vue 使用场景
+    1）curd 后台管理   （PC）
+    2）SPA 单页面应用 （移动）
+3、vue 优点
+    1、组件化
+    2、双向数据绑定
+    3、虚拟dom
+    4、指令系统 
+    5、mvvm模式 
+        m model 数据模型
+        v view  视图
+        vm view-model  
+
+
+vue 使用
+vue.js 版本：2.6.10 （11951行  404kb）  /最新版测试 3 
+vue-cli 2 -命令行 / 3-界面
+1、直接用 <script> 引入
+
+2、vue-cli 脚手架 ---模块化
+  
+
+
+
+指令：
+v-for 
+    v-for="值 in 数组"
+    {{值}}
+     v-for="（值，下标） in 数组"
+    {{值}} {{下标}}
+
+    v-bind:key="下标/id（唯一）"
+
+v-if
+    条件为true 加载dom
+    条件为false 移除dom 
+v-show
+    条件为 true 显示dom style="display:block"
+    条件为 false 隐藏   style="display:none"
+
+v-model
+    设置 和 获取 表单值
+
+v-bind:   简写为 ：  
+    绑定属性
+
+
+
+
+
+    
+
+

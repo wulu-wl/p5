@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 累加1 -->
+        <button v-on:click="a=a+1">+</button>
+        <p>{{a}}</p>
+        <!-- true 变false  false 变true -->
+        <button v-on:click="b=!b">true/false</button>
+        <p>{{b}}</p>
+    </div>
+    <script>
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                a: 0,
+                b: true
+            }
+        })
+    </script>
+</body>
+
+</html>

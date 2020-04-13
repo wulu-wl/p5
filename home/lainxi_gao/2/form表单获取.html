@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/home/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 文本框 -->
+        <input type="text" placeholder="姓名" v-model="user" >
+        <p>姓名:{{user}}</p>
+        <!-- 单选框 -->
+        <input type="radio" name="sex" value="男" id="nan" v-model="sex"><label for="nan">男</label>
+        <input type="radio" name="sex" value="女" id="nv" v-model="sex"><label for="nv">女</label>
+        <p>姓名:{{sex}}</p>
+        <!-- 多选框 -->
+        <input type="checkbox" v-model="hobby" value="唱歌">唱歌
+        <input type="checkbox" v-model="hobby" value="学习">学习
+        <input type="checkbox" v-model="hobby" value="篮球">打篮球
+        <button @click="qx">全选</button><button @click="fx">反选</button><button @click="qbx">全部选</button>
+        <p>爱好:{{hobby}}</p>
+        <!-- 下拉框 -->
+        <select v-model="sf">
+            <option value="省份" disabled>省份</option>
+            <option value="河南">河南</option>
+            <option value="河北">河北</option>
+        </select>
+        <p>省份:{{sf}}</p>
+        <!-- 文本域 -->
+        <textarea cols="30" rows="10" v-model="text"></textarea>
+        <p>文本框内容:{{text}}</p>
+
+        <button @click="getInfo">获取信息</button>
+    </div>
+</body>
+<script>
+    let  vm=new Vue({
+        el:"#app",
+        data:{
+            msg:"form表单数据获取",
+            user:'',
+            sex:"男",
+            hobby:[],
+            sf:'',
+            text:''
+        },
+        methods:{
+            getInfo(){
+                console.log(this.user,this.sex,this.hobby,this.sf,this.text)
+            },
+            //全选
+            qx(){
+                
+            },
+            //反选
+            fx(){
+
+            },
+            //全不选
+            qbx(){
+
+            }
+        }
+    })
+</script>
+</html>

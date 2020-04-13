@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{a1}}{{b1}}{{c1}} <br>
+        {{d1}}{{e1}}{{f1}}
+        <com1 v-on:fsb="js1"></com1>
+        <com2 v-on:fsdf="js2"></com2>
+    </div>
+    <script type="text/template" id="box1">
+        <div class="box1">
+            {{fs1(b1)}}
+        </div>
+    </script>
+    <template id="box2">
+        <div class="box2">
+            {{fs2(d1,f1)}}
+        </div>
+    </template>
+</body>
+<script src="./vue.js"></script>
+<script>
+    Vue.component('com1',{
+        template:'#box1',
+        data(){
+            return {
+                b1:"bb"
+            }
+        },
+        methods:{
+            fs1(b1){
+                this.$emit('fsb',b1)
+            }
+        }
+    })
+    let com2={
+        template:'#box2',
+        data(){
+            return {
+                d1:"dd",
+                f1:'ff'
+            }
+        },
+        methods:{
+            fs2(d1,f1){
+                this.$emit('fsdf',d1,f1)
+            }
+        }
+    }
+new Vue({
+    el:"#app",
+    data:{
+        a1:'aa',
+        b1:'',
+        c1:'cc',
+        d1:'',
+        e1:"ee",
+        f1:''
+    },
+    methods:{
+        js1(b1){
+            this.b1=b1
+        },
+        js2(d1,f1){
+            this.d1=d1,
+            this.f1=f1
+        }
+    },
+    components:{
+        com2
+    }
+})
+
+</script>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .footer{
+            width: 100%;
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            align-items: center;
+        }
+        .footer  router-link{
+            display: inline-block;
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- 路由文件入口 -->
+        <div class="footer">
+            <router-link to="/index">首页</router-link>
+            <router-link to="/discover">发现</router-link>
+            <router-link to="/order">订单</router-link>
+            <router-link to="/my">我的</router-link>
+        </div>
+
+        <!-- 内容展示区 -->
+        <router-view></router-view>
+    </div>
+    <template id="index">
+        <div class="index">
+            首页页面
+        </div>
+    </template>
+    <template id="discover">
+        <div class="discover">
+            发现页面
+        </div>
+    </template>
+    <template id="order">
+        <div class="order">
+            订单页面
+        </div>
+    </template>
+    <template id="my">
+        <div class="my">
+            我的页面
+        </div>
+    </template>
+</body>
+<script src="./vue.js"></script>
+<script src="./vue-router.js"></script>
+<script>
+    let index={
+        template:"#index",
+        data(){
+            return {
+                msg:"aaa"
+            }
+        }
+    }
+    let discover={
+        template:"#discover"
+    }
+    let order={
+        template:"#order"
+    }
+    let my={
+        template:"#my"
+    }
+
+    //配置路由
+    let routes=[{
+        path:'/index',
+        component:index
+    },{
+        path:'/discover',
+        component:discover
+    },{
+        path:'/order',
+        component:order
+    },{
+        path:'/my',
+        component:my
+    },{
+        path:"*",
+        redirect:"/index"
+    }]
+
+    //
+    let router=new VueRouter({routes})
+    let vm =new Vue({
+        el:"#app",
+        data:{},
+        router
+    })
+
+</script>
+</html>

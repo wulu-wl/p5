@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- v- -->
+        {{msg1}}
+        <hr/>
+        {{msg2}}
+        <hr/>
+        <div v-html="msg2"></div>
+        <hr/>
+        <div v-text="msg2"></div>
+    </div>    
+</body>
+<script src="./vue.js"></script>
+<script>
+    // v-html  v-text  html()和text()
+    new Vue({
+        el:"#app",
+        data:{
+            msg1:"因为爱钱",
+            msg2:"<p>王菲</p>"
+        }
+    })
+    // v-html识别标签识别html标签   v-text将标签也渲染
+</script>
+</html>

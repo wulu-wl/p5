@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 数组 -->
+        <ul>
+            <li v-for="(val1,index1) in arr" v-bind:key="index1">
+                {{val1}}
+            </li>
+        </ul>
+        <!-- 对象 -->
+        <ul>
+            <li v-for="(val,key) in obj" :key="key">{{val}} ======= {{key}}</li>
+        </ul>
+        <!-- 数字 -->
+        <ul>
+            <li v-for="(val3,index3) in num">{{val3}}----{{index3}}</li>
+        </ul>
+        <!-- 数字  --分页 按钮 -->
+        <button v-for="(val4,index4) in page" v-on:click="tiao(val4)">
+            第{{arr2[index4]}}页
+        </button>
+    </div>
+
+    <script>
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                arr: ["1111", "aaaaa", "bbbbbb"],
+                obj: { "name": "gao", "age": 19 },
+                num: 5,
+                page: 10,
+                arr2: ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"]
+
+            },
+            methods: {
+                tiao(pagenum) {
+                    alert(pagenum)
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

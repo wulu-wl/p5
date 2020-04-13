@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{msg}}
+        <input type="text" v-model="mel">
+        <hr>
+        <p>{{mel}}</p>
+        <!-- v-mode 双星数据绑定原理是Obeject.definepropety()的方法重新定义了对象的获取属性值和设置属性值 -->
+        <!-- VUE实现双向数据绑定的原理就是利用了 Object.defineProperty() 这个方法重新定义了对象获取属性值(get)和设置属性值(set)的操作来实现的 -->
+    </div>
+</body>
+<script>
+    let vm=new Vue({
+        el:"#app",
+        data:{
+            msg:"v-model联系页面",
+            mel:123
+        }
+    })
+
+</script>
+</html>

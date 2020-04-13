@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 输出 222 -->
+        <p>{{333333333 | gd}}</p>
+        <!-- 转大写 -->
+        <p>{{'abcde' |da }}</p>
+        <!-- 转小写 -->
+        <p>{{"XYZZZ" |xiao}}</p>
+        <!-- 货币  -->
+        <p>{{ 1000000 |hb}}</p>
+        <!-- 串联 -->
+        <p>{{"aaaabbbbb"|da|xiao|da}}</p>
+    </div>
+    <script>
+        //固定 测试。。。
+        Vue.filter("gd", function (x) {
+            // x 是 ｜管道符 左边的值
+            // ...对这个 管道符左边的值 进行处理
+            // return  新的值
+            return 222
+        })
+        //转大写
+        Vue.filter("da", function (x) {
+            // console.log(x)
+            let z = x.toUpperCase();
+            return z
+        })
+
+
+        const vm = new Vue({
+            el: "#app",
+            filters: {
+                // 转小写
+                "xiao": function (x) {
+                    let z = x.toLowerCase();
+                    return z;
+                },
+                //货币
+                "hb": function (x) {
+                    let z = x.toLocaleString()
+                    return "¥" + z
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

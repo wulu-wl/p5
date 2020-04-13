@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // for(var i=0;i<5;i++){
+    //     setTimeout(function () { console.log(i) },1000)
+    // }
+
+    //输出5个5
+    // setTimeout是异步执行的，1000毫秒后向任务队列里添加一个任务，
+    // 只有主线上的全部执行完才会执行任务队列里的任务， 
+    // 所以当主线程for循环执行完之后 i 的值为5，这个时候再去任务队列中执行任务，i全部为5；
+    // 每次for循环的时候setTimeout都会执行，但是里面的function则不会执行被放入任务队列，
+    // 因此放了5次；for循环的5次执行完之后不到1000毫秒；
+    //1000毫秒后全部执行任务队列中的函数，所以就是输出五个5啦
+
+
+
+    // var arr=[1,2]
+    // console.log(Array.isArray(arr))
+    
+    function Person(name,age) { 
+        this.name=name;
+        this.age=age;
+        this.sayHi=function(){
+            console.log(this.name+this.age+'sayHi方法')
+
+        }
+        
+     }
+
+     let p1=new Person('aa',18)
+     p1.sayHi()
+     function People(){
+         this.sayHello=function(){
+             console.log(this.name+"sayHelo")
+         }
+     }
+     People.prototype=Person
+     let p2=new People('aa',18)
+     p2.sayHello()
+</script>
+</html>

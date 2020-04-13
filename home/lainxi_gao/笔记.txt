@@ -1,0 +1,58 @@
+1、绑定事件
+    行内： v-on:click="执行一行代码"
+    不传参数：
+         v-on:click="方法"
+         new Vue({
+             ...
+             methods:{
+                 方法(event){
+                     event 是 事件对象 .target ....
+                 }
+             }
+         })
+    传参数：
+         v-on:click="方法(参数,$evnet)"
+         new Vue({
+             ...
+             methods:{
+                 方法(参数,event){
+                     event 是 事件对象 .target ....
+                 }
+             }
+         })
+    methods调用 
+        事件调用
+        vue实例对象.方法名() --(vm.fn())
+    data 调用
+        vue 实例内部 this.属性名
+        vue 实例外部  vue实例对象.属性名 --(vm.a)
+事件修饰符：
+    .stop       阻止事件冒泡
+    .prevent    阻止默认事件
+    .once       事件只执行一次
+
+按键修饰符：
+    .enter  回车
+    .esc    退出
+    .space  空格
+    .tab    切换
+    .delete (捕获“删除”和“退格”键)
+    .up     上
+    .down   下
+    .left   左
+    .right  右
+    .键盘码  13回车 / 17tab
+
+系统修饰键：
+    .ctrl   
+    .alt
+    .shift
+    .meta
+.exact 修饰符 ：允许你控制由精确的系统修饰符组合触发的事件
+
+鼠标按钮修饰符：
+    .left
+    .right
+    .middle
+
+

@@ -1,0 +1,50 @@
+指令：对普通 DOM 元素进行底层操作
+1、创建指令
+    全局
+        Vue.directive("指令名称",{
+           // inserted()
+            生命周期函数(el,binding,vnode){
+                el---指令所在的节点
+                binding --- 指令对象 --传递的参数
+                vnode -- 指令所在的节点的虚拟dom对象
+            }
+        })
+    局部
+        new Vue({
+            ...
+            directives:{
+                "第一个指令名称":{
+                     生命周期函数(el,binding,vnode){
+               
+                     }
+                },
+                "第二个指令名称":{
+                     生命周期函数(el,binding,vnode){
+               
+                     }
+                },
+            }
+        })
+
+2、调用指令
+<节点 v-指令名称="参数"></节点>
+
+
+
+过滤器：
+
+    全局：
+        Vue.filter("过滤器名",function(值,参数){
+            return 新值
+        })
+
+    局部：
+        new Vue({
+            filters:{
+               "过滤器名": function(值,参数){
+                        return 新值
+                }
+            }
+        })
+    调用：
+        {{ 值 | 过滤器名(参数) }}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/home/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div v-for="(item,index) in arr" :key="index">
+            {{item.check}}
+            <input type="checkbox" v-model="item.check">{{item.hobby}}
+            <!-- <input type="checkbox" v-model="item.check">{{item.hobby}} -->
+
+        </div>
+        <input type="checkbox" v-model="active" @click="qx1">全选{{active}}
+        <!-- <button @click="qx">全选</button> -->
+        <button @click="fx">反选</button>
+        <button @click="qbx">全不选</button>
+    </div>
+</body>
+<script>
+    let vm=new Vue({
+        el:"#app",
+        data:{
+            msg:"全选反选全不选",
+            arr:[{
+                hobby:"学习",
+                check:false
+            },{
+                hobby:"唱歌",
+                check:false
+            },{
+                hobby:"跳舞",
+                check:false
+            }],
+            active:false
+        },
+        methods:{
+            //全选
+            qx(){
+                this.arr.forEach((item)=>{
+                    item.check=true
+                })
+            },
+            //全选11
+            qx1(){
+                console.log(this.active)
+                this.arr.forEach((item)=>{
+                    console.log(item,this.active)
+                    item.check=!this.active
+                    console.log(item)
+                    console.log(this.active)
+                })
+            },
+            //全不选
+            qbx(){
+                this.arr.forEach((item)=>{
+                    item.check=false
+                })
+            },
+            //反选
+            fx(){
+                this.arr.forEach((item)=>{
+                    item.check=!item.check
+                })
+            },
+        },
+        computed:{
+
+        }
+
+    })
+</script>
+</html>

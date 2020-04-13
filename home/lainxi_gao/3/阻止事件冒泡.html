@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/home/vue.js"></script>
+    <style>
+        ul{
+            width: 200px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+        }
+        li{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <ul @click="xq">
+            <!-- 第二种 传参  e.stopPropagation-->
+            <li @click="add($event)">+</li>
+            <li>{{num}}</li>
+            <!-- 第一种阻止默认事件的方法 -->
+            <li @click.stop="reduce()">-</li>
+        </ul>
+    </div>
+</body>                                                 
+<script>
+    let vm=new Vue({
+        el:"#app",
+        data:{
+            num:0,
+        },
+        methods:{
+            add(e){
+                e.stopPropagation();
+                this.num++
+            },
+            reduce(){
+                this.num--
+            },
+            xq(){
+                alert("详情")
+            }
+        }
+    })
+
+</script>
+</html>

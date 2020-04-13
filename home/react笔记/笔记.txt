@@ -1,0 +1,148 @@
+mvc
+    m model 数据模型
+    v view  视图
+    c contruller 控制器
+
+react 概述
+    React 起源于 Facebook 的内部项目，用来架设 Instagram 的网站，并于 2013 年 5 月开源。
+    React 是一个用于构建用户界面的 JAVASCRIPT 库。
+    React 主要用于构建UI，很多人认为 React 是 MVC 中的 V（视图）。
+react 优点
+    1.声明式设计 −React采用声明范式，可以轻松描述应用。
+         https://www.cnblogs.com/johnzhu/p/9016277.html
+        　声明式和命令式是两种编程范式。react是声明式的，jquery那样直接操作dom是命令式
+         声明式就像你告诉你朋友画一幅画，你不用去管他怎么画的细节
+         命令式就像按照你的命令，你朋友一步步把画画出来
+           换言之
+         命令式编程：命令“机器”如何去做事情(how)，这样不管你想要的是什么(what)，它都会按照你的命令实现。
+         声明式编程：告诉“机器”你想要的是什么(what)，让机器想出如何去做(how)。
+
+    2.高效 −React通过对DOM的模拟，最大限度地减少与DOM的交互。
+            虚拟dom -VDOM 
+            （1）什么是虚拟DOM？
+                vdom可以看作是一个使用javascript模拟了DOM结构的树形结构，这个树结构包含整个DOM结构的信息，
+                dom 模拟成 js 对象
+            （２）为什么要使用虚拟DOM？
+                之前使用原生js或者jquery写页面的时候会发现操作DOM是一件非常麻烦的一件事情，
+                往往是DOM标签和js逻辑同时写在js文件里，
+                数据交互时不时还要写很多的input隐藏域，
+                如果没有好的代码规范的话会显得代码非常冗余混乱，
+                耦合性高并且难以维护。
+
+                另外一方面在浏览器里一遍又一遍的渲染DOM是非常非常消耗性能的，常常会出现页面卡死的情况；
+                所以尽量减少对DOM的操作成为了优化前端性能的必要手段，
+                vdom就是将DOM的对比放在了js层，通过对比不同之处来选择新渲染DOM节点，从而提高渲染效率。（diff算法）
+
+    3.灵活 −React可以与已知的库或框架很好地配合。
+    4.JSX − JSX 是 JavaScript 语法的扩展。React 开发不一定使用 JSX ，但我们建议使用它。
+    5.组件 − 通过 React 构建组件，使得代码更加容易得到复用，能够很好的应用在大项目的开发中。
+    6.单向响应的数据流 − React 实现了单向响应的数据流，从而减少了重复代码，这也是它为什么比传统数据绑定更简单。
+
+
+使用react 构建项目
+    1、导入式 script src
+        react.js    (核心库)
+        react-dom.js（react 操作dom 的库）
+        babel.js     （JSX 转为js ）
+    2、工程化 webpack
+
+1、jsx
+    js 里面可以写html 标签
+    type="text/babel"
+    {变量} {表达式}
+2、render
+ render 
+    第一个参数==html标签 有且只能有一个根节点 
+        1-1、外层加 一个标签包起来 （多一个外层标签）
+        1-2、使用React.Fragment 组件（不会多一个外层标签）
+    第二个参数 要操作的dom 节点
+
+3、map
+    {
+        arr.map((val,index)=>{
+            return (
+
+            )
+        })
+    }
+
+4、class 样式
+    className=
+5、绑定事件
+    onClick={函数名}    不传参数
+    onClick={()=>函数名(参数)} 传参数
+    this 指向 当前组件实例
+     1、
+      constructor(){
+          this.方法名=this.方法名.bind(this)
+      }  
+      btn(){
+
+      }
+      调用：onClick={this.btn}
+
+      2、方法写成箭头函数 ，，箭头函数中的this 指向创建时的对象
+        btn=()=>{
+
+        }
+         调用：onClick={this.btn}
+      3、调用时 使用箭头函数调用
+         btn(){
+
+         }
+        调用：onClick={()=>this.btn()}
+
+
+6、组件
+    6-1、函数组件
+        声明：
+        组件名 首字母大写
+        function 组件名(参数){
+           // 参数==={自定义属性名:要传递的值}
+            return (
+                 <节点>  {参数.自定义属性名} </节点> 
+            )
+        }
+        调用：
+            <组件名 自定义属性名="要传递的值"></组件名>   
+    6-2、class组件
+        声明：
+          组件名 首字母大写
+        class 组件名 extends React.Component{
+            constructor(){
+                super();
+                this.state={"a":999} //状态
+            }
+            btn=()=>{
+               //修改state
+                this.setState({
+                    a:8888888
+                }) 
+            }
+            render(){
+                return(
+                   <节点> {this.props.自定义属性名} </节点>
+                )
+            }
+
+        }
+        调用：
+         <组件名 自定义属性名="要传递的值" onClick={this.btn}></组件名> 
+
+props state 区别
+    props 只读的属性 
+    state 可读可写状态 
+
+函数组件 class 组件区别
+                函数             class
+获取 props      参数            this.props
+状态 state      没有             有 constructor(){ this.state={} }
+生命周期        没有              有
+执行速度         快               慢
+使用场景        简单无状态静态      复杂生命周期有状态动态
+
+
+
+
+
+

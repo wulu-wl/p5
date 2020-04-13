@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for=" (x,y) in arr " v-bind:key="y">{{x}}--------{{y}}</li>
+
+        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(v,i) in arr2" v-bind:key="v.id">
+                    <td>{{v.id}}</td>
+                    <td>{{v.title}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                arr: ["111111", "2222222", "33333", "4444444"],
+                arr2: [
+                    { "id": 1, "title": "呵呵呵" },
+                    { "id": 2, "title": "哦哦哦" },
+                    { "id": 3, "title": "哈哈哈" },
+                    { "id": 4, "title": "嗷嗷嗷" }
+
+                ]
+
+            }
+        })
+    </script>
+</body>
+
+</html>

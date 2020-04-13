@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+</body>
+<script src="./jquery-3.4.1.min.js"></script>
+<script>
+    //Promise对象那个
+    //es5
+    //回调函数   函数调用   函数作为参数在函数中使用
+    // function yuehui(callback) { 
+    //     setTimeout(function () { 
+    //         console.log("吃完饭")
+    //         callback()
+    //      },1000)
+    //  }
+    //  function fn() { 
+    //      console.log("去约会")
+    //   }
+    //   yuehui(fn)
+
+
+
+    //   //闭包
+    //   //垃圾回收机制
+    //   //全局不可以找局部   局部可以找全局
+    //   function f1() { 
+    //       var s=1;
+    //       function f2() { 
+    //           s++;
+    //           console.log(s)
+    //        }
+    //        return f2
+    //    }
+    //    f1()()
+
+       //es6通过 promise 巧妙的完成了一部操作
+    //    ajax对象是不是promise对象
+    // function Promise() {  }
+    // new Promise
+        //jquery的ajax返回的是defered对象，通过promise的resolve()方法
+    //promise 基础用法
+    // new Promise(){}
+
+// const promise=new Promise((resolve,reject)=>{
+//     console.log(1)
+//     resolve()
+//     console.log(2)
+// })
+// promise.then(()=>{
+//     console.log(3)
+// })
+// console.log(4)
+
+
+//es5正常写法
+// $.get("./a.html",(data)=>{
+//     console.log(data)
+//     $.get('./b.html',(res)=>{
+//         console.log(res)
+//     })
+// })
+
+// new Promise((res,rej)=>{
+//     $.get("./a.html",(data)=>{
+//         console.log(data)
+//         res()
+//     })
+// }).then(function () { 
+//     $.get("./b.html",(data)=>{
+//         console.log(data)
+//     })
+//  })
+
+//new promise 随机生成1-10  大于5成功  小于5失败
+// let num=Math.floor(Math.random()*11)
+// console.log(num)
+// let p=new Promise((res,rej)=>{
+//     if(num<=5){
+//         res("小于都等于5，成功")
+//     }else{
+//         rej("大于5,失败")
+//     }
+// })
+// p.then((res)=>{console.log(res)},(rej)=>{
+//     console.log(rej)
+// })
+
+
+
+</script>
+</html>

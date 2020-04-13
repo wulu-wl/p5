@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+    <script src="./vue-router.js"></script>
+</head>
+<body>
+    <div id="app">
+        <router-link to="/page1">路由一</router-link>
+        <router-link to="/page2">路由二</router-link>
+        <router-link to="/page3">路由三</router-link>
+        <router-view></router-view>
+    </div>
+    <!-- login组件 -->
+    <template id="login">
+        <div class="login">
+            用户名:<input type="text">
+            密码: <input type="text">
+            <button>登陆</button>
+        </div>
+    </template>
+</body>
+<script>
+    //login组件
+    let login={
+        template:"#login"
+    }
+    //定义四个路由
+    let routes=[
+        {
+            path:"/page1",
+            component:{
+                template:"<div>路由一</div>"
+            },
+            //局部路由钩子函数
+            beforeEnter(to,from,next){
+                console.log("aaa");
+                console.log(this);  //特别注意，这里的this指代的是window对象
+                console.log(to,from)  
+                next();
+            }
+        },
+        {
+            path:"/page2",
+            // 引入一个属性
+            meta:{
+                isLogin:true
+            },
+            component:{
+                template:"<div>路由二</div>" 
+            }
+        },
+        {
+            path:"/page3",
+            meta:{
+                power:1
+            },
+            component:{
+                template:"<div>路由三</div>" 
+            }
+        },
+        {
+            path:"/login",
+            component:login
+        }
+    ]
+    //new路由
+    let router=new VueRouter({
+        routes
+    })
+    let vm=new Vue({
+        el:"#app",
+        data:{},
+        router
+    })
+    
+
+    //.html<==>"/"
+    //.html#/login  <==> "／login"
+</script>
+</html>

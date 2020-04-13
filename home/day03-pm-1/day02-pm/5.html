@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 字母的第n个字母变大写 -->
+        <p>{{'abcdef' |dan(3)|dan(4)|dan(1) }}</p>
+    </div>
+    <script>
+        const vm = new Vue({
+            el: "#app",
+            // data: { a: "abcdefg" },
+            filters: {
+                "dan": function (x, y) {
+                    // x ==== abcdef
+                    // y ==== 2
+                    // charAt(字符串下标) --取第几个字符
+                    // console.log(x.charAt(y).toUpperCase())
+                    let s = [];
+                    for (let i in x) {
+                        if (i == y) {
+                            let da = x[i].toUpperCase();
+                            s.push(da)
+                        } else {
+                            s.push(x[i]);
+                        }
+
+                    }
+                    // console.log(s.join(""))
+                    return s.join("");
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>

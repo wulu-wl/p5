@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+        <hr/>
+        <p>{{msg|res}}</p>
+    </div>
+    <hr/>
+
+    <di id="app1">
+        <h1>{{msg1}}</h1>
+        <hr/>
+        <p>{{msg1|res}}</p>
+    </di>
+</body>
+<script src="./vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            msg:"局部过滤"
+        },
+        filters:{
+            res(val){
+                return val.split('').reverse().join('')
+            }
+
+        }
+    })
+
+    new Vue({
+        el:'#app1',
+        data:{
+            msg1:"局部过滤1"
+        },
+        
+    })
+</script>
+</html>

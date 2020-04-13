@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+    <style>
+        .h4-1{
+            color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{a}}</h1>
+        <hr>
+        <h2>{{2+3}}</h2>
+        <hr>
+        <h2>{{b-c}}****{{b+c}}==={{b*c}}</h2>
+        <hr>
+        <!-- {{}} 里面的数值可以进行运算-->
+        <!-- <h2>{{b  >  c }}</h2> -->
+        <!-- b和c之间可以进行比较 显示结果为布尔值-->
+        <!-- false -->
+        <!-- <h2>{{b > c ?"是":"否"}}</h2> -->
+        <!-- 进行三目运算时文字应该加引号 -->
+        <hr>
+        <h4 class="h4-1">己亥末，庚子初，荆楚大疫</h4>
+        <hr>
+        <!-- v-bind 绑定自定义属性 -->
+        <h5 v-bind:class="d" v-bind:title="c">举国战</h5>
+        <p v-html="e"></p>
+        <h2 v-text="e"></h2>
+        <!-- {{}}中的字符串自动识成文字 -->
+        <h3>{{"家中坐"}}</h3>
+    </div>
+</body>
+<script>
+
+    let vm = new Vue({
+        el: " #app",
+        data: {
+            msg: "v-html练习",
+            a: "123", b: 4, c: 5, d: "h4-1",
+            e: "<span>8888888</span>"
+        }
+    }) 
+</script>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/home/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 转数字 -->
+        <p>{{111 | xz}}</p>
+        <!-- 转大写 -->
+        <p>{{'abc' | dx}}</p>
+        <!-- 转小写 -->
+        <p>{{'ABC' | xx}}</p>
+        <!-- 、货币 -->
+        <p>{{100 | hb}}</p>
+        <!-- 大小大 -->
+        <!-- 以最后一个为准 -->
+        <p>{{'aaabbb'|xx|dx|dx}}</p>
+    </div>
+</body>
+<script>
+    //数值操作
+    Vue.filter("xz",function (x) {
+        // x代表|左侧的值 
+        return x+1
+     })
+     //大写
+     Vue.filter("dx",function (x) { 
+        return  x.toUpperCase()
+      })
+    let vm=new Vue({
+        el:"#app",
+        filters:{
+            //小写
+            "xx":function(x){
+                return x.toLowerCase()
+            },
+            //货币
+            "hb":function(x){
+                return "￥"+x
+            }
+        }
+    })
+</script>
+</html>

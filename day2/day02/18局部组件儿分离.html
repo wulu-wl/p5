@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <mycom></mycom>  
+    </div>
+    <!-- 局部组件儿分离 -->
+    <template id="box">
+        <div class="box">
+            <p>搜索</p>
+            <h2>增删改查</h2>
+        </div>
+    </template>   
+</body>
+<script src="./vue.js"></script>
+<script>
+    let mycom={
+        template:"#box"
+    }
+    let vm=new Vue({
+        el:"#app",
+        data:{
+
+        },
+        methods:{
+
+        },
+        components:{
+            mycom
+        }
+    })
+</script>
+</html>

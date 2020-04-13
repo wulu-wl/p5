@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- {{str|strfilter}} -->
+        <mycom></mycom>
+        <mycom1></mycom1>
+    </div>
+    <script type="text/template" id="box">
+        <div class="box">
+            今天周四,{{name}}演讲,啥也不是
+        </div>
+    </script>    
+    <template id="box1">
+        <div class="box1">
+            {{name}}
+        </div>
+    </template>
+</body>
+<script src="./vue.js"></script>
+<script>
+    //自定义指令  局部/全局
+    //组价儿
+    //全局组件儿
+    Vue.component("mycom",{
+        template:"#box",
+        data(){
+            return {
+                name:"韩以轩"
+            }
+        }
+    })
+    let mycom1={
+        template:"#box1",
+        data(){
+            return {
+                name:"于蒙恩"
+            }
+        }
+    }
+    // 昨天的基础知识
+    // 全局过滤器
+    Vue.filter("strfilter",(val)=>{
+        return val.slice(0,3)
+    })
+    let vm=new Vue({
+        el:'#app',
+        data:{
+            str:"hello"
+        },
+        components:{
+            mycom1
+        }
+    })
+    
+    //单选框  多选框  下拉框   input值
+    // 过滤器案例,购物车案例,增删
+</script>
+</html>

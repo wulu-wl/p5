@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="allSel">全选</button>
+        <button @click="fanSel">反选</button>
+        <button @click="buSel">不选</button>
+        <h2>于蒙恩三大爱好</h2>
+        <!-- 渲染页面 -->
+        <p v-for="item in hobbies">
+            {{item.hobby}}
+            <input type="checkbox" v-model="item.checked">
+        </p>
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            hobbies:[
+                {
+                    hobby:"小甜甜",
+                    checked:true
+                },
+                {
+                    hobby:"白日梦",
+                    checked:false
+                },
+                {
+                    hobby:"洗衣服",
+                    checked:true
+                }
+            ]
+        },
+        methods:{
+            // 全选
+            allSel(){
+                this.hobbies.forEach(ele => {
+                    ele.checked=true;
+                });
+            },
+            //反选
+            fanSel(){
+                this.hobbies.forEach(ele => {
+                    ele.checked=!ele.checked
+                });
+            },
+            //不选
+            buSel(){
+                this.hobbies.forEach(ele => {
+                    ele.checked=false;
+                });
+            },
+        }
+    })
+</script>
+</html>

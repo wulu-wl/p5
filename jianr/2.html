@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .wrap div:nth-child(1){
+        background: lawngreen;
+    }
+    .wrap div:nth-child(2){
+        background: paleturquoise;
+    }
+    .wrap div:nth-child(3){
+        background: indianred;
+    }
+    .wrap div:nth-child(4){
+        background: royalblue;
+    }
+    .wrap div:nth-child(5){
+        background: teal;
+    }
+    .wrap div:nth-child(6){
+        background: mediumorchid;
+    }
+    .wrap {
+        display: grid;
+        /* 列 几列   列宽 */
+        /* grid-template-columns: 100px 100px 100px ; */
+
+        /* grid-template-columns: 1fr 1fr 1fr ; */
+        /* grid-template-columns: repeat(3,1fr),2fr ; */
+        /* grid-template-columns: repeat(auto-fit,minmax(100px,1fr)),2fr ; */
+
+        /* fr 将正个页面的子元素分配  可适应屏幕的宽度变化 */
+        /* 行  几行 行宽*/
+        /* grid-template-rows: 50px 50px 50px; */
+
+        /* height: 100vh;
+        grid-template-rows: 1fr 2fr; */
+
+        height: 100vh;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        "head head head"
+        "left . right"
+        "foot foot foot"
+         /* "1 1 1"
+         "2 . 3"
+         "4 4 4"; */
+    }
+    .item1{
+        /* 列从一开始到4结束 */
+        /* grid-column-start: 1;
+        grid-column-end: 4; */
+        /* grid-column: 1/4; */
+        grid-area: head;
+    }
+    .item2{
+        /* 行 从2开始到4结束 */
+        /* grid-row-start: 2;
+        grid-row-end: 4; */
+        /* grid-row: 2/4; */
+        grid-area: left;
+    }
+    .item4{
+        grid-area: right;
+    }
+    .item5{
+        grid-area: foot;
+    }
+    .item6{
+        grid-area: foot;
+    }
+    /* frection fr单位*/
+    /* repeat() */
+    /* minmax() */
+    /* auto-fit */
+    /* grid-template-areas */
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <!-- <div class="item3">3</div> -->
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+    </div>
+</body>
+</html>

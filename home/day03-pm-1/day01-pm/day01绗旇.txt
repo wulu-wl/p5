@@ -1,0 +1,126 @@
+1、vue js 是什么
+渐进式 JavaScript 框架
+
+渐进式:主张最少 
+     https://blog.csdn.net/wangzunkuan/article/details/80729683 
+     https://www.cnblogs.com/gopark/p/10771708.html
+
+作者：尤雨溪
+
+2、vue 使用场景
+    1）curd 后台管理   （PC）
+    2）SPA 单页面应用 （移动）
+3、vue 优点
+    1、组件化
+    2、双向数据绑定
+    3、虚拟dom
+    4、指令系统 
+    5、mvvm模式 
+        m model 数据模型
+        v view  视图
+        vm view-model  
+
+
+vue 使用
+vue.js 版本：2.6.10 （11951行  404kb）  /最新版测试 3 
+vue-cli 2 -命令行 / 3-界面
+1、直接用 <script> 引入
+2、vue-cli 脚手架 ---模块化
+  
+
+
+
+指令：
+v-for 
+    v-for="值 in 数组"
+    {{值}}
+     v-for="（值，下标） in 数组"
+    {{值}} {{下标}}
+
+    v-bind:key="下标/id（唯一）"
+
+v-if
+    条件为true 加载dom
+    条件为false 移除dom 
+v-show
+    条件为 true 显示dom style="display:block"
+    条件为 false 隐藏   style="display:none"
+
+v-model
+    设置 和 获取 表单值
+    修饰符：
+        .trim 去除首尾空格 
+        .number  转换为数字
+        .lazy   按下回车后更新
+
+v-bind:     
+    绑定属性 简写为 ：
+
+v-bind:class
+    变量：
+    v-bind:class="变量"
+    对象：true 绑定 false 不绑定
+    v-bind:class="{类名1:true/false,类名2:true/false}"
+    数组：
+    v-bind:class="['类名1',变量]"
+    v-bind:class="[{类名1:true/false,类名2:true/false},{类名1:true/false,类名2:true/false}]"
+
+v-bind:style
+    对象：
+    v-bind:style="{样式名:样式值,color:'red'}"
+    变量：
+     v-bind:style="styleobj"
+     new Vue({
+                ... 
+                data:{
+                    styleobj:{
+                        样式名:样式值,color:'red'
+                        }
+                    }
+            })
+v-html
+    渲染 html 字符串
+
+v-on:事件名="方法(参数)"
+
+    new Vue({
+        data:{
+            a:"1111"
+        }
+        methods:{
+            方法(参数){
+                //改变data
+                this.a=新值
+            }
+        }
+    })
+
+
+案例：
+    1、hello world 
+    2、循环 li
+    3、v-if 和 v-show 节点显示隐藏
+
+    4、事件 累加 
+    5、通过 绑定或移除 class 点击显示隐藏
+    6、增删改
+    7、获取 表单元素的值 
+
+作业：
+    用户管理
+        1、增加用户 （ id，姓名，年龄number,性别,爱好,地址,自我评价--可以是一段html代码）
+        2、渲染 （
+        如果没有数据 td 合并单元格 显示 "无数据请添加" v-if/v-show
+        如果年龄 小于 18岁 文字变红色 class  ）
+        3、删除 (根据id 删除)
+        4、修改（根据id 获取并渲染对应数据，点击确认修改 实现修改功能）
+
+
+
+
+
+
+
+    
+
+

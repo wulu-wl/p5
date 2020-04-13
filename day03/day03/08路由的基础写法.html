@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .luyou{
+            color: red;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- navlink  router  BrowserRouter -->
+        <router-link to="/movie" class="luyou">电影</router-link>
+        <router-link to="/music" class="luyou">音乐</router-link>
+        <!-- 容器 -->
+        <router-view></router-view>
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script src="./vue-router.js"></script>
+<script>
+    // 两个组件儿
+    let movie={
+        template:`
+            <div>
+                牧马人
+            </div>
+        `
+    }
+    let music={
+        template:`
+            <div>
+                我是如此相信
+            </div>
+        `
+    }
+    // 配置路由
+    let routes=[{
+        path:"/movie",
+        component:movie
+    },{
+        path:"/music",
+        component:music
+    }]
+    // 挂载路由文件
+    let router=new VueRouter({
+        routes
+    })
+    let vm=new Vue({
+        el:'#app',
+        data:{},
+        router
+    })
+</script>
+</html>

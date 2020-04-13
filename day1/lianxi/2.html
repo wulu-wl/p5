@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- <div v-html="msg1"></div>
+             <div v-html="msg2"></div>
+            v-html 识别html标签  只显示文本
+         -->
+
+        <!--
+         <div v-text="msg1"></div>
+         <div v-text="msg2"></div>
+            v-text 不识别html标签   标签也会显示
+        -->
+        <!-- v-bind :src-->
+        <!-- 简写:src-->
+        <img :src="src" :alt="alt" :title="title">
+    </div>
+</body>
+<script src="../1907pr/day01/vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            msg1:"hello world 1",
+            msg2:"<p>hello world 2</p>",
+            src:"./heben.jpg",
+            alt:"奥黛丽赫本",
+            active:true,
+            title:"悬停文本"
+        }
+    })
+</script>
+</html>

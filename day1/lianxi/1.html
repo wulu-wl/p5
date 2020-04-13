@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- {{msg}}   hello vue -->
+        <!-- {{htmlStr}}   <p>你好</p> -->
+        <!-- {{num}}  0 -->
+        <!-- {{num++}}  101 二进制-->
+        <!-- {{num+1}}   1 -->
+        <!-- {{++num}}   102 -->
+        <!-- {{ok?"aa":"bb"}}   bb -->
+        <!-- {{arrstr.split(",")}}    [ "a", "b", "c", "d" ] -->
+    </div>
+   
+</body>
+<script src="../1907pr/day01/vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            msg:'hello vue',
+            htmlStr:"<p>你好</p>",
+            num:0,
+            ok:false,
+            arrstr:"a,b,c,d"
+        }
+    })
+</script>
+</html>

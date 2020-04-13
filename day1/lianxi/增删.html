@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+        <input type="text" v-model="info" >
+        <button v-on:click="add" >增加</button>
+        <hr/>
+        <!-- <p v-for="(item,i) in arr">{{item}}<button @click="del(i)">删除</button></p> -->
+        <p v-for="item of arr.entries()" :id="item[0]">{{item[1]}}<button @click="del1">删除</button></p>
+    </div>
+</body>
+<script src="../1907pr/day01/vue.js"></script>
+<script>
+    var vm=new Vue({
+        el:"#app",
+        data:{
+            msg:"增加  删除",
+            info:'',
+            arr:[]
+        },
+        methods:{
+            add(){
+                 this.arr.push(this.info)
+                 this.info=""
+            },
+            del(ele){
+                // console.log(ele)
+                return this.arr.splice(ele,1)
+            },
+            del1(ev){
+                // console.log(Number(ev.target.parentNode.id))
+                let n=Number(ev.target.parentNode.id)
+                this.arr.splice(n,1)
+            }
+        }
+    })
+
+</script>
+</html>

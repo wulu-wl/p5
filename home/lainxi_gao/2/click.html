@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/home/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 不传参打印事件对象 -->
+        <button @click="btn">点击btn</button>
+        <!-- 自定义参数 -->
+        <button @click="btn1('a')">点击btn1</button>
+        <!-- 自定义参数加事件对象-->
+        <button @click="btn2('b',$event)">点击btn2</button>
+    </div>
+</body>
+<script>
+    let vm=new Vue({
+        el:"#app",
+        data:{
+            msg:"点击事件"
+        },
+        methods:{
+            // 不传参可直接打印事件对象
+            btn(e){
+                console.log(e.target)
+                console.log(e.currentTarget)
+            },
+            //传参时事件对象和自定义参数均出现时事件对象加$event
+            btn1(a){
+                console.log(a)
+            },
+            btn2(b,e){
+                console.log(e.target)
+                console.log(b)  
+            }
+        }
+
+    })
+</script>
+</html>

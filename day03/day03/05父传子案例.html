@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <mycom :msg0="msg0"></mycom>
+        <mycom1 :msg1="msg1" :msg2="msg2"></mycom1> 
+    </div>
+    <script type="text/template" id="box1">
+        <div class="box1">
+            {{msg0}}{{msg3}}
+        </div>
+    </script>
+    <template id="box2">
+        <div class="box2">
+            {{msg2}}{{msg1}}{{msg4}}{{msg5}}
+        </div>
+    </template>
+</body>
+<script src="./vue.js"></script>
+<script>
+    // 两个子组件儿
+    Vue.component("mycom",{
+        template:"#box1",
+        data(){
+            return {
+                msg3:"三大"
+            }
+        },
+        props:["msg0"]
+    })
+    //局部组件儿
+    let mycom1={
+        template:"#box2",
+        data(){
+            return {
+                msg4:"抽烟",
+                msg5:"烫头"
+            }
+        },
+        props:["msg1","msg2"]
+    }
+    let vm=new Vue({
+        el:"#app",
+        data:{
+            msg0:"发光",
+            msg1:"喝酒",
+            msg2:"爱好"
+        },
+        components:{
+            mycom1
+        }
+    })
+</script>
+</html>

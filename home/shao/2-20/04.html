@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //面向对象   继承多态封装
+    //构造函数的声明
+    function Person(name,age) { 
+            this.name=name;
+            this.age=age;
+            this.width=100
+
+     }
+     //扩展属性和防范   完成动他操作
+     Person.prototype={
+         say(){
+             console.log(this.name)
+         },
+         Hi(){
+             console.log(this.age)
+         },
+         crow(){
+
+         }
+
+     }
+     //继承   
+     //重复性去创建对象时构造函数的特点    人类  动物
+     //继承的目的     尽量少的使用new关键字去创建构造函数
+</script>
+</html>

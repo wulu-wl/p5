@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* body{ */
+        /* 创建一个计数器 */
+        /* 	创建或重置一个或多个计数器 */
+        /* counter-reset: aa;
+        } */
+        /* 在p标签之前加或者在p标签之后加都可以*/
+        /* 使用 ::before 和 ::after 伪元素来插入自动生成的内容 */
+        /* p::before{ */
+        /* 递增变量 */
+         /* 递增一个或多个值 */
+        /* counter-increment: aa; */
+       
+        /* 插入生成的内容 */
+        /* content: counter(aa); */
+        /* content:"cde" counter(aa) "：";
+
+        } */
+
+        /* 嵌套使用计数器 */
+        /* body {
+            counter-reset: aa;
+        }
+
+        h1 {
+            counter-reset: bb;
+        }
+
+        h1::before {
+            counter-increment: aa;
+            content: counter(aa);
+        }
+
+         p::before {
+            counter-increment: bb;
+            content: counter(aa) "."counter(bb) " ";
+        }  */
+
+         body{
+            counter-reset: j1;
+        }
+        h1{
+            counter-reset: j2;
+        }
+        h1::before{ 
+             counter-increment: j1;
+             content: counter(j1);
+        }
+        p::before{
+            counter-increment: j2;
+            content: counter(j1)"."counter(j2);
+        } 
+/* 
+       .a1{
+           width: 50px;
+           height: 50px;
+           background: red;
+       }
+       .a2{
+           width: 50px;
+           height: 5 0px;
+           background: green;
+       } */
+    </style>
+</head>
+
+<body>
+    <h1>我是一个css3计数器1</h1>
+    <p>A</p>
+    <p>B</p>
+    <p>C</p>
+    <p>D</p>
+    <h1>我是一个css3计数器2</h1>
+    <p>A</p>
+    <p>B</p>
+    <p>C</p>
+    <p>D</p>
+    <h1>我是一个css3计数器3</h1>
+    <p>A</p>
+    <p>B</p>
+    <p>C</p>
+    <p>D</p>
+
+    <div class="a2 a1"></div>
+</body>
+
+</html>
